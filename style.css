@@ -21,12 +21,10 @@ body.dark {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: 
-    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-    url("images/grid_pattern.jpg") center/cover fixed no-repeat;
-
-  color: var(--text-color);
+  /*background: url("images/NightClouds.jpg") no-repeat center center;*/
+  background: hotpink;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 /* ===== Navigation ===== */
