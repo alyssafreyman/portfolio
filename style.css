@@ -22,10 +22,11 @@ body.dark {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-color);
+  background: 
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("images/grid_pattern.jpg") center/cover fixed no-repeat;
+
   color: var(--text-color);
-  transition: all 0.4s ease;
-  line-height: 1.6;
 }
 
 /* ===== Navigation ===== */
