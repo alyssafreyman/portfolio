@@ -51,19 +51,28 @@ body {
   align-items: center; /* Centers the resume image horizontally */
 }
 
-/* Style for the actual resume image */
+/* This centers the container itself on the page */
+.resume-display {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  padding: 20px 0;         /* Adds some breathing room top and bottom */
+  width: 100%;
+}
+
+/* This controls the "paper" look and the size */
 .resume-image-container {
-  max-width: 900px; /* Limits width so it doesn't get huge on big screens */
-  width: 95%;      /* Responsive for mobile */
-  margin: 40px auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Makes it look like a piece of paper */
-  line-height: 0;   /* Removes tiny gap at bottom of image */
+  max-width: 800px;        /* Limits width so it's readable on desktop */
+  width: 90%;              /* Allows it to shrink on mobile */
+  margin: 0 auto;          /* Standard centering trick */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Adds a "paper" depth */
+  border-radius: 4px;      /* Sharp but slightly rounded corners */
+  overflow: hidden;        /* Keeps the image inside the rounded corners */
 }
 
 .resume-image-container img {
-  width: 100%;     /* Fills the container */
-  height: auto;    /* Maintains original 1080x1920 proportions */
-  border-radius: 8px;
+  display: block;          /* Removes the weird bottom gap images sometimes have */
+  width: 100%;             /* Fills the container width */
+  height: auto;            /* Keeps the 1080x1920 proportions perfect */
 }
 
 /* Dark Mode Overrides for Backgrounds */
