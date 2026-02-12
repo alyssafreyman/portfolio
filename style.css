@@ -45,7 +45,7 @@ body {
 #resume-page {
   /* Give the page a solid neutral background instead of an image */
   background-image: none;
-  background-color: var(--card-bg); 
+  background-color: #a5bd9b; 
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers the resume image horizontally */
