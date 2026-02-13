@@ -11,17 +11,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  /* =========================
-     PARALLAX WINDOW EFFECT
-  ========================== */
-
-  const windowLayer = document.querySelector(".window-layer");
-
-  window.addEventListener("scroll", function () {
-    const scrollY = window.scrollY;
-
-    // Adjust this number to control speed
-    windowLayer.style.transform = `translateY(${scrollY * 0.3}px)`;
-  });
-
 });
