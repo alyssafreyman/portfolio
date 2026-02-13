@@ -61,6 +61,41 @@ body {
   height: auto;
 }
 
+.window-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.window-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* NAV INSIDE WINDOW IMAGE */
+.window-nav {
+  position: absolute;
+  top: 20px;      /* Adjust vertically */
+  right: 40px;    /* Adjust horizontally */
+  display: flex;
+  gap: 20px;
+}
+
+.window-nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.window-nav a:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
 #resume-page {
   /* Give the page a solid neutral background instead of an image */
   background-image: none;
