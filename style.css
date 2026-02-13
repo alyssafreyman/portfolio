@@ -47,7 +47,7 @@ body {
 }
 .window-layer {
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -170,7 +170,7 @@ body.dark #home-page {
 }
 
 /* Glassmorphism Effect: Makes content readable over images */
-.card, .about, .hero {
+.card, .about {
   background: rgba(255, 255, 255, 0.7); /* Light overlay */
   backdrop-filter: blur(5px); /* Blurs background image slightly behind text */
   padding: 2rem;
