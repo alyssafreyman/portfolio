@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     DARK MODE TOGGLE
-  ========================== */
+  // /* =========================
+  //    DARK MODE TOGGLE
+  // ========================== */
 
-  const modeToggle = document.getElementById("modeToggle");
+  // const modeToggle = document.getElementById("modeToggle");
 
-  modeToggle.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-  });
+  // modeToggle.addEventListener("click", function () {
+  //   document.body.classList.toggle("dark");
+  // });
 
 
 });
