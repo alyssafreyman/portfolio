@@ -77,8 +77,8 @@ body {
 /* NAV INSIDE WINDOW IMAGE */
 .window-nav {
   position: absolute;
-  top: 50px;      /* Adjust vertically */
-  left: 150px;    /* Adjust horizontally */
+  top: 75px;      /* Adjust vertically */
+  left: 300px;    /* Adjust horizontally */
   display: flex;
   gap: 20px;
 }
