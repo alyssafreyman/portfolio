@@ -78,7 +78,7 @@ body {
 .window-nav {
   position: absolute;
   top: 20px;      /* Adjust vertically */
-  right: 40px;    /* Adjust horizontally */
+  left: 100px;    /* Adjust horizontally */
   display: flex;
   gap: 20px;
 }
@@ -87,13 +87,27 @@ body {
   text-decoration: none;
   color: #111;
   font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: 0.2s ease;
+
+  padding: 8px 18px;
+  border-radius: 999px; /* makes it pill shaped */
+
+  /* Glass bubble effect */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: all 0.2s ease;
 }
 
 .window-nav a:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  transform: translateY(-2px);
+}
+
+.window-nav a.active {
+  background-color: #111;
+  color: white;
 }
 
 #resume-page {
