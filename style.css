@@ -39,7 +39,14 @@ body {
 
 /* Home Page Specific */
 #home-page {
-  background-image: url("images/GridPattern.jpg");
+  background-image: 
+    url("images/WindowTab.png"),
+    url("images/GridPattern.jpg");
+
+  background-position: center, center;
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
 }
 
 #resume-page {
