@@ -2,46 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
     <nav>
-      <h1>John Doe</h1>
+      <h1>Alyssa Freyman</h1>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li class="dropdown">
+      <a href="#work">Work ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="VideoAudio.html">Video / Audio</a></li>
+        <li><a href="TechProj.html">UX / UI</a></li>
+        <li><a href="GraphicDesign.html">Graphics</a></li>
       </ul>
-    </nav>
+    </li>
+
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
   </header>
 
-  <section class="hero">
-    <h2>Creative Developer</h2>
-    <p>I design and build modern websites.</p>
-  </section>
+<section class="hero">
+  <h2>Creative Developer</h2>
+  <p>I craft compelling stories through video, marketing, and user-centered design.</p>
+  <button id="viewWorksBtn">View Works</button>
+</section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Short bio here.</p>
+    <p>I've always had a passion for creating innovative projects, whether through graphic design, videography, or UX/UI design. With a BA in Communications (Filmmaking) and Creative Technologies from Berry College, I've had the privilege of working on a wide range of exciting projects since then. Currently, I'm earning my Masters in Computer Science from the Georgia Institute of Technology.<br><br>
+Having worked across various aspects of communication and technology, I feel incredibly fortunate to do what I love every day. From capturing stunning visuals to meeting people from all walks of life, I’m constantly learning and growing in my craft. I’m always eager for the next challenge, so if you have an idea and are looking to collaborate, I'd love to hear from you.</p>
   </section>
 
   <section id="work">
-    <h2>My Work</h2>
-    <div class="grid">
-      <div class="card">Project 1</div>
-      <div class="card">Project 2</div>
-      <div class="card">Project 3</div>
+  <h2>My Work</h2>
+  <p>Like some of the examples below? Click on one of the keychains to see more of my work.</p>
+
+  <div class="work-layout">
+    <div class="keyring">
+      <img src="images/keyring.png" class="ring">
+
+      <a href="TechProj.html" class="key ux">
+        <img src="images/techKeychain.png" alt="UX/UI Design">
+      </a>
+
+      <a href="VideoAudio.html" class="key video">
+        <img src="images/cameraKeychain.png" alt="Video & Audio">
+      </a>
+
+      <a href="GraphicDesign.html" class="key graphics">
+        <img src="images/graphicdesignKeychain.png" alt="Graphics">
+      </a>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <button>Get in Touch</button>
-  </section>
+    <div class="grid">
+    <div class="card">
+        <img src="images/ExploringTheMoon/ETM1.jpg" alt="Project 1 Screenshot" class="card-image">
+        <h3>Exploring the Moon series</h3>
+    </div>
+    <div class="card">
+        <img src="images/AudibleRedesign/Audible1.jpg" alt="Project 2 Screenshot" class="card-image">
+        <h3>Audible App Redesign</h3>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Need someone for your communications or user design project? Let's connect!</p>
+  <a href="mailto:hello@example.com" class="btn">Get in Touch</a>
+</section>
+
+<script src="script.js"></script>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: hello@example.com</p>
+      <p>Phone: +1 123 456 7890</p>
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
