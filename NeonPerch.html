@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Neon Perch — Brand Identity</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .swatch-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    flex: 1;
+    min-width: 110px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: var(--shadow-sm);
+  }
+  .swatch-block { height: 90px; }
+  .swatch-info  { padding: 12px 14px; background: var(--white); }
+  .swatch-info strong { display:block; font-size:.9rem; color:var(--ink); font-weight:600; margin-bottom:2px; }
+  .swatch-info span   { font-size:.78rem; color:var(--muted); }
+
+  .logo-trio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .logo-panel {
+    border-radius: var(--radius-md);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-panel img {
+    max-width: 170px;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  .logo-panel .panel-label {
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .type-card {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 700px) {
+    .logo-trio  { grid-template-columns: 1fr 1fr; }
+    .type-grid  { grid-template-columns: 1fr; }
+    .swatch-row { gap: 10px; }
+    .swatch     { min-width: 80px; }
+    .gallery-grid img[style*="grid-column"] { grid-column: span 1 !important; aspect-ratio: 4/3 !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 3l14 9-7 1-4 7L5 3z" fill="#1a1a18" stroke="#fff" stroke-width="1"/>
+  </svg>
+</div>
+
+<!-- Header / Nav -->
+<header id="site-header">
+  <nav>
+    <h1>Alyssa</h1>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="dropdown">
+        <a href="index.html#work">Work ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="VideoAudio.html">Video / Audio</a></li>
+          <li><a href="TechProj.html">UX / UI</a></li>
+          <li><a href="GraphicDesign.html">Graphics</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<div class="project-hero fade-in">
+  <div class="project-hero-content">
+    <div class="project-hero-left">
+      <span class="page-label">Brand Identity &nbsp;·&nbsp; Graphic Design</span>
+      <h2>The Neon Perch</h2>
+    </div>
+    <div class="project-hero-right">
+      <p>
+        A high-energy, late-night espresso bar in a bustling downtown arts district. While most coffee 
+        shops lean cosy and earthy, Neon Perch goes electric. The brief: retro-futurism meets tropical 
+        noir — 80s Miami vibes, modernised for a clean, premium feel.
+      </p>
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Type</span>
+          <span class="meta-value">Concept Project</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Industry</span>
+          <span class="meta-value">Food &amp; Beverage</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Deliverables</span>
+          <span class="meta-value">Logo, Palette, Typography, Collateral</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Vibe</span>
+          <span class="meta-value">Retro-Futurism · Tropical Noir</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Overview Image -->
+<section class="project-section fade-in">
+  <img src="images/NeonPerch/brandOverview.png" alt="The Neon Perch brand overview" class="project-image">
+</section>
+
+<!-- Logo -->
+<section class="project-section fade-in" style="background:var(--cream-dark);">
+  <h3>The Icon Mark</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    A minimalist icon built to work as a social media avatar, a UV-reactive cup stamp, and a glowing 
+    neon sign. Shown across dark, mid, and light backgrounds to demonstrate range.
+  </p>
+  <div class="logo-trio">
+    <div class="logo-panel" style="background:#0b0f1a;">
+      <img src="images/NeonPerch/brandmark.png" alt="Logo on dark navy">
+      <span class="panel-label" style="color:#7a8ba8;">On Navy</span>
+    </div>
+    <div class="logo-panel" style="background:#1a2238;">
+      <img src="images/NeonPerch/brandmark.png" alt="Logo on charcoal">
+      <span class="panel-label" style="color:#7a8ba8;">On Charcoal</span>
+    </div>
+    <div class="logo-panel" style="background:#f0f4ff; border:1px solid rgba(0,0,0,0.07);">
+      <img src="images/NeonPerch/brandmark.png" alt="Logo on white">
+      <span class="panel-label" style="color:var(--muted);">On White</span>
+    </div>
+  </div>
+</section>
+
+<!-- Colour Palette -->
+<section class="project-section fade-in">
+  <h3>Colour Palette</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    Deep navy and charcoal as the canvas, with electric cyan, hot pink, and cyber lime as jolts of 
+    energy — colours that pop under UV light and glow in a dark room.
+  </p>
+  <div class="swatch-row">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#FF35FF;"></div>
+      <div class="swatch-info"><strong>Neon Magenta</strong><span>#0B0F1A</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#00ECFF;"></div>
+      <div class="swatch-info"><strong>Cyan</strong><span>#1A2238</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#FFC350;"></div>
+      <div class="swatch-info"><strong>OR-CHALEUR</strong><span>#00F5D4</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#ffffff;"></div>
+      <div class="swatch-info"><strong>White</strong><span>#FF2D78</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#000000;"></div>
+      <div class="swatch-info"><strong>Black</strong><span>#C8F135</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Typography -->
+<section class="project-section fade-in" style="background:var(--cream-dark);">
+  <h3>Typography</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    A bold, condensed all-caps display font for high-impact signage and headlines, paired with a 
+    clean geometric sans-serif for menus, labels, and body copy.
+  </p>
+  <div class="type-grid">
+    <div class="type-card">
+      <span class="meta-label" style="display:block; margin-bottom:14px;">Display &amp; Signage</span>
+      <p style="font-family:'Arial Black',sans-serif; font-size:2.4rem; font-weight:900; line-height:1; color:var(--ink); margin-bottom:10px; letter-spacing:.06em; text-transform:uppercase;">Lightning Brew</p>
+      <span style="font-size:0.82rem; color:var(--sage-dark); font-weight:500;">Condensed Display — bold, geometric, all-caps</span>
+      <p style="margin-top:10px; font-size:0.83rem; color:var(--muted); letter-spacing:.05em; text-transform:uppercase;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+    </div>
+    <div class="type-card">
+      <span class="meta-label" style="display:block; margin-bottom:14px;">Body &amp; UI Copy</span>
+      <p style="font-family:'Inter',sans-serif; font-size:1.4rem; font-weight:300; line-height:1.5; color:var(--muted); margin-bottom:10px;">Served glowing under UV light.</p>
+      <span style="font-size:0.82rem; color:var(--sage-dark); font-weight:500;">Geometric Sans-Serif Light — clean, spacious, precise</span>
+      <p style="margin-top:10px; font-size:0.83rem; color:var(--muted);">Aa Bb Cc Dd Ee — 0123456789</p>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Collateral -->
+<section class="project-section fade-in">
+  <h3>Brand Collateral</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    The signature Lightning Brew is served in a UV-reactive glass — so the brand collateral had to 
+    hold its own in the dark. Cup sleeves, late-night menus, and social assets all lean into the electric palette.
+  </p>
+  <div style="display: flex; gap: 16px; align-items: stretch;">
+  
+  <!-- Tote on the left -->
+  <div style="flex: 1;">
+    <img src="images/NeonPerch/tote.png" alt="Tote bag" style="width: 100%; height: 80%; object-fit: contain; background-color: var(--cream); border-radius: var(--radius-sm);">
+  </div>
+
+  <!-- 2x2 grid on the right -->
+<div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; row-gap: 70px; align-content: start;"> 
+    <img src="images/NeonPerch/cup.png"         alt="Cup"         class="gallery-item" style="height: 250px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream);">
+    <img src="images/NeonPerch/coffeeBeans.png" alt="Coffee beans" class="gallery-item" style="height: 250px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream);">
+    <img src="images/NeonPerch/mug.png"         alt="Mug"         class="gallery-item" style="height: 250px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream);">
+    <img src="images/NeonPerch/sign.png"        alt="Sign"        class="gallery-item" style="height: 250px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream);">
+  </div>
+
+</div>
+</section>
+
+<!-- Project Nav -->
+<div class="project-nav-section">
+  <a href="InkwellIsle.html" class="project-nav-btn">
+    <span class="nav-direction">←</span>
+    <span class="nav-label">Previous Project</span>
+  </a>
+  <a href="GraphicDesign.html" class="project-nav-btn">
+    <span class="nav-label">Back to Graphic Design</span>
+    <span class="nav-direction">→</span>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const hamburger = document.getElementById('hamburger');
+  const navList   = document.getElementById('nav-list');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navList.classList.toggle('open');
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

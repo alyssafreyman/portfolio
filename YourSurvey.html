@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Survey Redesign — a group UX research and prototyping project redesigning the Georgia Tech PeerSurvey platform, by Alyssa Freyman.">
+  <title>Your Survey Redesign | Alyssa Freyman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— UX Research &amp; Design</p>
+        <h2>Your Survey<br>Redesign</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>Georgia Tech's PeerSurvey platform is used by nearly every HCI student — but its outdated design, confusing navigation, and limited functionality make it harder to use than it needs to be. Our team redesigned the survey creation experience from the ground up.</p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">UX Researcher, Media Prototype Designer, Collaborative Final Designer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Team</span>
+            <span class="meta-value">Group project — Georgia Tech HCI course</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Methods</span>
+            <span class="meta-value">Think-Aloud Studies, Heuristic Evaluation, Brainstorming, Prototyping</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic UX Research &amp; Design Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STAT BAR ── -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Think-aloud participants</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Prototype problem areas</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">9</span>
+      <span class="stat-label">Design variants tested</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">45<span style="font-size:1.2rem;">min</span></span>
+      <span class="stat-label">Avg. session length</span>
+    </div>
+  </div>
+
+  <!-- ── THE PROBLEM ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 01</p>
+        <h3>The Problem</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Georgia Tech's PeerSurvey platform (peersurvey.cc.gatech.edu) is a tool nearly every student in the HCI course relies on for participant data collection. But despite its wide use, the platform consistently frustrated the people using it — including every member of our group.</p>
+        <p>The problems weren't subtle. The design felt outdated, navigation was unnecessarily complex, and core features like publishing surveys and adding media to questions were harder to use than they should be.</p>
+        <div class="case-callout">
+          <strong>The core opportunity:</strong> The primary task — creating a survey, publishing it, and viewing results — should be straightforward. Our goal was to redesign the survey creation process to be intuitive enough that students could focus on their research, not on figuring out the tool.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEEDFINDING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 02</p>
+        <h3>Needfinding</h3>
+      </div>
+      <div class="case-body-col">
+        <p>We ran two research methods in parallel to build a clear picture of where the platform failed its users.</p>
+
+        <div class="tech-steps">
+          <div class="tech-step">
+            <span class="tech-step-num">01</span>
+            <div class="tech-step-body">
+              <h4>Think-Aloud Studies — 3 Participants</h4>
+              <p>Three participants — two novices and one expert — were each asked to complete the same task: create a provided survey, publish it, and view the results. Sessions ran 30–45 minutes each. Participants narrated their actions in real time, surfacing confusion points that post-task surveys would have missed entirely.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">02</span>
+            <div class="tech-step-body">
+              <h4>Heuristic Evaluation</h4>
+              <p>The team evaluated the existing interface against Nielsen's usability heuristics, identifying violations in areas like visibility of system status, consistency, error prevention, and recognition over recall. This gave us a principled framework for prioritizing which problems to tackle first.</p>
+            </div>
+          </div>
+        </div>
+
+        <img src="images/YourSurvey/needfinding.png"
+             alt="Think-aloud study findings organized by category"
+             class="project-image"
+             style="margin-top: 16px;"/>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── KEY FINDINGS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 03</p>
+        <h3>Key Findings</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Insights from the think-aloud studies fell into three consistent categories: functionality, interface, and potential enhancements. Three problems surfaced repeatedly across all participants:</p>
+        <ul class="case-list">
+          <li><strong>Publishing confusion</strong> — participants struggled to find and understand the publish/unpublish flow. There was no clear indication of a survey's current status, and no autosave — meaning unsaved changes were easily lost.</li>
+          <li><strong>Media insertion was unnecessarily complex</strong> — adding images or links to survey questions required too many steps with no clear affordances. Users didn't know where to click or how to remove media once added.</li>
+          <li><strong>Question creation terminology was unclear</strong> — labels like "Choose One" and "Choose Multiple" confused participants who expected standard terms like "Multiple Choice" and "Multiple Select". The lack of scrolling affordance also caused users to miss content below the fold.</li>
+        </ul>
+
+        <img src="images/YourSurvey/scrolling-affordance.png"
+             alt="Example of lack of scrolling affordance in the original interface"
+             class="project-image"
+             style="margin-top: 8px;"/>
+        <p class="table-note">Example of the original interface's lack of scrolling affordance — content below the fold was invisible to users.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRAINSTORMING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 04</p>
+        <h3>Brainstorming</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Brainstorming was structured in two phases to balance individual creativity with group alignment.</p>
+        <ul class="case-list">
+          <li><strong>Individual ideation</strong> — each team member independently generated 10–20 ways to turn needfinding insights into actionable design improvements, documented either by hand or in writing.</li>
+          <li><strong>Group synthesis</strong> — the team then came together to share ideas and narrow focus to the concepts most directly tied to the research findings. Three problem areas rose to the top: the publish/unpublish flow, media insertion, and the question creation form.</li>
+        </ul>
+        <div class="case-callout">
+          <strong>Why three separate prototype sets?</strong> Rather than designing one monolithic solution, we created independent prototype sets for each problem area. This let us test targeted design decisions in isolation before combining the best elements into a final unified design.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROTOTYPING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 05</p>
+        <h3>Prototyping</h3>
+      </div>
+      <div class="case-body-col">
+
+        <!-- Prototype set 1 -->
+        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; margin-bottom: 16px; color: var(--ink);">Prototype Set 1 — Publish &amp; Autosave</h4>
+        <p>Three layouts exploring how to make the publish flow and autosave feature clearer and more reliable:</p>
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag before">Design 1</span>
+            </div>
+            <img src="images/YourSurvey/publish-p1.png"
+                 alt="Prototype 1 — settings and questions on one page"
+                 class="graph-image"/>
+            <p class="graph-caption">Settings and questions combined on one page with autosave indicator and publish button at the end — minimizing navigation steps.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag after">Design 2</span>
+            </div>
+            <img src="images/YourSurvey/publish-p2.png"
+                 alt="Prototype 2 — settings and questions split across 2 pages"
+                 class="graph-image"/>
+            <p class="graph-caption">Settings and questions split across two pages with autosave, letting users move back and forth while preserving progress.</p>
+          </div>
+        </div>
+        <div class="graph-comparison" style="margin-top: 16px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag" style="background: rgba(171,195,172,0.2); color: var(--sage-dark);">Design 3</span>
+            </div>
+            <img src="images/YourSurvey/publish-p3.png"
+                 alt="Prototype 3 — one page with publish toggle"
+                 class="graph-image"/>
+            <p class="graph-caption">One-page layout with a color-coded publish toggle (red = unpublished, green = published), also visible in the survey list view with an "expired" status state.</p>
+          </div>
+          <div class="graph-item" style="visibility: hidden;"></div>
+        </div>
+
+        <!-- Prototype set 2 -->
+        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; margin: 40px 0 16px; color: var(--ink);">Prototype Set 2 — Media Insertion <span style="font-size: 0.8rem; font-weight: 400; color: var(--sage-dark);">(my focus)</span></h4>
+        <p>Three approaches to simplifying how users add and remove media from survey questions. In all three designs, an × button was added to each piece of media so users could easily delete it — a basic affordance the original interface was missing entirely.</p>
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag before">Design 1</span>
+            </div>
+            <img src="images/YourSurvey/media-p1.png"
+                 alt="Media prototype 1 — popup window with link and upload options"
+                 class="graph-image"/>
+            <p class="graph-caption">A popup window offering both link insertion and file upload in one place, keeping the main interface clean.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag after">Design 2 ✓</span>
+            </div>
+            <img src="images/YourSurvey/media-p2.png"
+                 alt="Media prototype 2 — drag and drop with Add Media button"
+                 class="graph-image"/>
+            <p class="graph-caption">Separate link and upload buttons (chain icon and image icon) opening a drag-and-drop area inside the question — leveraging familiar icon affordances.</p>
+          </div>
+        </div>
+        <div class="graph-comparison" style="margin-top: 16px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag" style="background: rgba(171,195,172,0.2); color: var(--sage-dark);">Design 3</span>
+            </div>
+            <img src="images/YourSurvey/media-p3.png"
+                 alt="Media prototype 3 — slideshow mode with display and edit modes"
+                 class="graph-image"/>
+            <p class="graph-caption">A slideshow/multi-media mode with separate display and edit views, supporting richer media-heavy survey questions.</p>
+          </div>
+          <div class="graph-item" style="visibility: hidden;"></div>
+        </div>
+
+        <!-- Prototype set 3 -->
+        <h4 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem; margin: 40px 0 16px; color: var(--ink);">Prototype Set 3 — Question Creation Form</h4>
+        <p>Three variants addressing the confusing question creation interface — particularly the unclear question type labels and the rigid answer input format:</p>
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag before">Design 2 ✓</span>
+            </div>
+            <img src="images/YourSurvey/question-p2.png"
+                 alt="Question prototype 2 — clearer dropdown terminology"
+                 class="graph-image"/>
+            <p class="graph-caption">Standard terminology in the question type dropdown — "Multiple Choice" and "Multiple Select" instead of the confusing "Choose One" / "Choose Multiple" labels, reducing the gulf of execution.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag after">Design 3 ✓</span>
+            </div>
+            <img src="images/YourSurvey/question-p3.png"
+                 alt="Question prototype 3 — rich text editor"
+                 class="graph-image"/>
+            <p class="graph-caption">A rich text editor for question creation — each answer option entered individually (hit Enter for a new one) rather than in a semicolon-separated line, consistent with familiar form interfaces.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL DESIGN ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 06</p>
+        <h3>Final Design</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The final prototype combined the winning designs from each prototype set into a single cohesive redesign. The team collaborated on the integration, ensuring decisions across all three areas worked together visually and functionally.</p>
+        <ul class="case-list">
+          <li><strong>Publish/Autosave (Design 3)</strong> — one-page layout with a color-coded publish toggle and autosave, visible both on the editing page and in the survey list.</li>
+          <li><strong>Media insertion (Design 2)</strong> — two icon buttons (link and upload) that open a drag-and-drop area inline within the question, with × buttons for easy removal.</li>
+          <li><strong>Question creation (Design 3)</strong> — rich text editor with individual answer option inputs, Enter-key navigation, and standard question type terminology throughout.</li>
+        </ul>
+
+        <div class="graph-comparison" style="margin-top: 16px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Redesigned Landing Page</span>
+            </div>
+            <img src="images/YourSurvey/final-landing.png"
+                 alt="The redesigned PeerSurvey landing page"
+                 class="graph-image"/>
+            <p class="graph-caption">The redesigned PeerSurvey landing page — cleaner layout with clearer entry points for new and returning users.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Survey Editor</span>
+            </div>
+            <img src="images/YourSurvey/final-editor.png"
+                 alt="Survey editing and question creation combined on one page"
+                 class="graph-image"/>
+            <p class="graph-caption">Editing and question creation combined on one page. The autosave indicator is visible at the top — no more lost work.</p>
+          </div>
+        </div>
+
+        <div class="graph-comparison" style="margin-top: 24px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Delete Confirmation</span>
+            </div>
+            <img src="images/YourSurvey/final-delete.png"
+                 alt="Confirmation dialog for the delete button"
+                 class="graph-image"/>
+            <p class="graph-caption">A confirmation dialog before deleting a survey — a simple error prevention pattern the original interface lacked entirely.</p>
+          </div>
+          <div class="graph-item" style="visibility: hidden;"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIDEO DEMO ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 07</p>
+        <h3>Demo</h3>
+      </div>
+      <div class="case-body-col">
+        <p>A walkthrough of the final prototype demonstrating the redesigned survey creation flow, publish toggle, media insertion, and question creation interface.</p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/PkYUQmNCfqM"
+            title="Your Survey Redesign — Final Prototype Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAKEAWAYS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 08</p>
+        <h3>Takeaways</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Working on a platform that we ourselves used as students gave this project an unusual advantage — we had genuine firsthand frustration to draw on, which made the needfinding feel less like research and more like articulating something we already knew but hadn't fully examined. The think-aloud sessions with other students confirmed that our experience wasn't unique.</p>
+        <p>The most valuable lesson from this project was the power of separating problems before solving them. By prototyping the publish flow, media insertion, and question creation independently, we could make targeted design decisions for each without the complexity of trying to solve everything at once. The final design was stronger because of that discipline.</p>
+        <p>My focus on the media prototype specifically reinforced how much a small affordance — an × button, a recognizable icon, a drag-and-drop target — can reduce friction for users who would otherwise just give up on a feature entirely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT NAVIGATION ── -->
+  <section class="project-nav-section">
+    <a href="AudibleRedesign.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Previous Project</span>
+    </a>
+    <a href="GameController.html" class="project-nav-btn next">
+      <span class="nav-label">Next Project</span>
+      <span class="nav-direction">→</span>
+    </a>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-caption"></p>
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vocalytics — a research project testing whether smartphone breathing audio can estimate Respiratory Rate and VO₂ max, by Alyssa Freyman.">
+  <title>Vocalytics | Alyssa Freyman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— UX / UI / Tech Research</p>
+        <h2>Vocalytics</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>Can a smartphone microphone estimate your fitness level? We tested whether breathing audio captured on an everyday device could accurately measure Respiratory Rate and predict VO₂ max — no lab equipment required.</p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">Research & Testing, Data Collection, Signal Analysis</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Team</span>
+            <span class="meta-value">Alyssa Freyman, Joseph Little, Camille Molas, Thandar Tun</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">C#, Python, phyphox, .NET Core</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic Research Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOOK STAT BAR ── -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <span class="stat-number">−0.24</span>
+      <span class="stat-label">BPM avg. error (Alyssa)</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Participants tested</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Intensity levels measured</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">±3–5</span>
+      <span class="stat-label">BPM accuracy target</span>
+    </div>
+  </div>
+
+  <!-- ── THE PROBLEM ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 01</p>
+        <h3>The Problem</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Measuring aerobic fitness accurately today requires either expensive lab equipment (the gold-standard Cardiopulmonary Exercise Test) or consumer wearables that carry a 10–15% error rate and use opaque, inconsistent algorithms.</p>
+        <p>This creates a gap: most people don't have access to reliable, low-cost fitness monitoring. Smartwatches and smart rings help, but they're still expensive — and their VO₂ max estimates vary significantly by brand and model.</p>
+        <p>Our question: <strong>could a smartphone microphone — something nearly everyone already owns — serve as a viable tool for estimating Respiratory Rate and, by extension, aerobic fitness?</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESEARCH & BACKGROUND ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 02</p>
+        <h3>Research &amp; Background</h3>
+      </div>
+      <div class="case-body-col">
+        <p>We grounded our approach in existing literature before designing the study. Key findings that shaped our methodology:</p>
+        <ul class="case-list">
+          <li>The <strong>Cardiopulmonary Exercise Test (CPET)</strong> has been the gold standard for VO₂ max measurement since Hill et al. (1924) — but it requires clinical equipment and trained staff.</li>
+          <li><strong>Consumer wearables</strong> show a 10–15% error rate in VO₂ max estimation (Henriksen 2020; Lambe 2025; Jamieson 2024), and their proprietary algorithms are rarely transparent.</li>
+          <li>Standard <strong>breathing frequency</strong> falls between 0.2–2Hz (Lyons et al., 2011) — a range that can be isolated from audio using a band-pass filter.</li>
+          <li>The <strong>Rockport 10 Mile Walk Test</strong> provided a non-lab backup method for VO₂ max comparison.</li>
+        </ul>
+        <p>The gap we identified: no existing study had tested whether a simple in-ear Bluetooth microphone paired with a smartphone could estimate RR with clinical-grade accuracy during everyday walking intensities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APPROACH & METHODS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 03</p>
+        <h3>Approach &amp; Methods</h3>
+      </div>
+      <div class="case-body-col">
+        <p>We designed a controlled protocol that balanced scientific rigor with practical constraints:</p>
+        <ul class="case-list">
+          <li><strong>Devices:</strong> Smartphone + phyphox app (audio amplitude capture), smartwatch, and smart ring for VO₂ max reference values.</li>
+          <li><strong>Protocol:</strong> Each participant completed 3 × 2-minute walks at easy, moderate, and hard intensities while audio was recorded via Bluetooth microphone.</li>
+          <li><strong>Ground truth:</strong> Participants manually counted their own breaths during each session to establish baseline RR values for comparison.</li>
+        </ul>
+        <div class="case-callout">
+          <strong>Key decision:</strong> We originally planned a single 20-minute continuous recording, but dropped this after realizing it introduced too many noise variables and was impractical for participants. Shorter 2-minute sessions per intensity level produced cleaner, more analyzable data.
+        </div>
+        <p>This change — recognizing a flaw in the original plan and adapting — was one of the most valuable lessons of the project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECHNICAL IMPLEMENTATION ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 04</p>
+        <h3>Technical Implementation</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The signal processing pipeline was built in <strong>C# (.NET Core)</strong> using CsvHelper, NWaves, and ScottPlot packages, with additional analysis in <strong>Python</strong>.</p>
+
+        <div class="tech-steps">
+          <div class="tech-step">
+            <span class="tech-step-num">01</span>
+            <div class="tech-step-body">
+              <h4>Band-Pass Filter</h4>
+              <p>Applied a Finite Impulse Response (FIR) filter to isolate breathing frequencies between 0.2–2Hz, removing low-frequency drift and high-frequency noise from movement and wind.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">02</span>
+            <div class="tech-step-body">
+              <h4>Moving RMS Smoothing</h4>
+              <p>Applied a sliding Root Mean Square window across the signal to normalize sharp peaks, making individual breaths easier to detect reliably.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">03</span>
+            <div class="tech-step-body">
+              <h4>Peak Detection &amp; RR Calculation</h4>
+              <p>A peak detection algorithm identified individual breath cycles within the filtered signal. A minimum inter-breath interval was enforced to eliminate false positives. Peak count was converted to breaths per minute.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">04</span>
+            <div class="tech-step-body">
+              <h4>VO₂ Max Estimation</h4>
+              <p>Used the Jackson et al. non-exercise model incorporating age, gender, BMI, and Physical Activity Level. RR was added as an additional scaling factor, with a lower boundary to prevent negative values.</p>
+            </div>
+          </div>
+        </div>
+        <!-- ✅ tech-steps closed -->
+
+        <!-- Signal processing graphs -->
+        <div class="graph-intro">
+          <p>The difference between raw and processed audio is significant — here's what the signal looks like before and after the filtering pipeline:</p>
+        </div>
+
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag before">Before</span>
+              <span class="graph-title">Raw Amplitude Data</span>
+            </div>
+            <img
+              src="images/Vocalytics/original.png"
+              alt="Raw audio amplitude signal showing noisy, unprocessed breathing data"
+              class="graph-image"/>
+            <p class="graph-caption">Raw amplitude values captured directly from the Bluetooth microphone via phyphox. The signal contains significant noise from movement, wind, and environmental interference — individual breaths are not distinguishable.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag after">After</span>
+              <span class="graph-title">Filtered &amp; Smoothed Data</span>
+            </div>
+            <img
+              src="images/Vocalytics/clean.png"
+              alt="Cleaned and filtered audio signal after band-pass filter and moving RMS smoothing"
+              class="graph-image"/>
+            <p class="graph-caption">The same signal after applying the band-pass filter (0.2–2Hz) and moving RMS smoothing. Individual breath cycles are now clearly visible as distinct peaks, allowing the peak detection algorithm to count RR accurately.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULTS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 05</p>
+        <h3>Results</h3>
+      </div>
+      <div class="case-body-col">
+        <p>All four participants achieved RR estimates well within the target accuracy range of ±3–5 BPM. The overall average difference across all participants was <strong>0.73 BPM</strong>.</p>
+
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Participant</th>
+                <th>Light (GT vs. Est.)</th>
+                <th>Moderate (GT vs. Est.)</th>
+                <th>Heavy (GT vs. Est.)</th>
+                <th>Avg. Diff.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Camille</td>
+                <td>11 vs. 12.40</td>
+                <td>15 vs. 16.36</td>
+                <td>19 vs. 19.83</td>
+                <td>+1.20 BPM</td>
+              </tr>
+              <tr>
+                <td>Joseph</td>
+                <td>13 vs. 14.50</td>
+                <td>17 vs. 17.98</td>
+                <td>21 vs. 22.18</td>
+                <td>+1.22 BPM</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Alyssa</strong></td>
+                <td>12 vs. 12.00</td>
+                <td>16 vs. 15.93</td>
+                <td>22 vs. 21.36</td>
+                <td><strong>−0.24 BPM</strong></td>
+              </tr>
+              <tr>
+                <td>Thandar</td>
+                <td>10 vs. 10.34</td>
+                <td>14 vs. 15.12</td>
+                <td>19 vs. 19.67</td>
+                <td>+0.24 BPM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">GT = Ground Truth (manually counted). Est. = Algorithm estimate. All values in breaths per minute (BPM).</p>
+
+        <div class="case-callout">
+          <strong>Standout result:</strong> Alyssa's estimates had an average error of just −0.24 BPM across all three intensity levels — the closest to ground truth in the study and well below the ±3–5 BPM target threshold.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REFLECTION ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 06</p>
+        <h3>What We'd Do Differently</h3>
+      </div>
+      <div class="case-body-col">
+        <ul class="case-list">
+          <li><strong>Larger participant pool</strong> — four participants is a strong proof of concept but insufficient for statistical generalization. A study of 20–30 participants would yield more reliable conclusions.</li>
+          <li><strong>Lab-grade RR baseline</strong> — manual breath counting as ground truth introduces human error. Comparing against a clinical respiratory monitor would strengthen validity.</li>
+          <li><strong>Additional biometric inputs</strong> — incorporating heart rate, age, and weight more directly into the VO₂ max model would improve accuracy. The current model relies heavily on self-reported PAL.</li>
+          <li><strong>Controlled noise environment</strong> — wind and motion artifact significantly affected signal quality outdoors. Indoor treadmill testing would isolate the audio variable more cleanly.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAKEAWAYS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 07</p>
+        <h3>Takeaways</h3>
+      </div>
+      <div class="case-body-col">
+        <p>This project reinforced that the most interesting problems sit at the intersection of disciplines. The signal processing work required thinking like an engineer; the study design required thinking like a researcher; and communicating the results clearly required thinking like a designer.</p>
+        <p>The result that stood out most wasn't the technology — it was the realization that a $0 microphone most people already carry could produce estimates within a fraction of a BPM of ground truth. That has real implications for accessible health monitoring in low-resource settings.</p>
+        <a href="files/Vocalytics-FinalPresentation.pdf"
+           target="_blank"
+           rel="noopener"
+           class="btn"
+           style="margin-top: 32px; display: inline-block;">
+          View Full Presentation (PDF) →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT NAVIGATION ── -->
+  <section class="project-nav-section">
+    <a href="TechProj.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Back to UX / UI</span>
+    </a>
+    <a href="AudibleRedesign.html" class="project-nav-btn next">
+      <span class="nav-label">Next Project</span>
+      <span class="nav-direction">→</span>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

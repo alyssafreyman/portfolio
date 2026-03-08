@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The CRT Journey">
+  <title>The CRT Journey | Alyssa Freyman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— Video &amp; Audio / Documentary Short Film</p>
+        <h2>The CRT<br>Journey</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>I made this 10-minute documentary for my senior exit exam hackathon project. For this exam, we have four hours to put together something related to what field we want to go into after graduation. This video explores how some of the Creative Technologies majors entered into the program and grew through the years.</p>
+
+        <!-- Project meta -->
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">Videographer and Editor</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Format</span>
+            <span class="meta-value">Documentary Short Film</span>
+          </div>
+          <!-- <div class="meta-item">
+            <span class="meta-label">Episodes</span>
+            <span class="meta-value">4 Episodes</span>
+          </div> -->
+          <div class="meta-item">
+            <span class="meta-label">Platform</span>
+            <span class="meta-value">YouTube</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED VIDEO EMBED -->
+  <section class="project-section video-section">
+    <!-- <p class="section-label">— Episode 1</p> -->
+    <h3>Watch the Documentary</h3>
+<div class="video-wrapper-link">
+  <a href="https://youtu.be/Qpbuk4zwHFI?si=E29b8y1vsqaeJ3dN" target="_blank" rel="noopener">
+    <img src="images/CRTJourney/CRTJ.png" alt="Watch Episode 1 on YouTube" class="video-thumb-link">
+    <div class="video-thumb-play">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="6,4 20,12 6,20"/>
+      </svg>
+    </div>
+  </a>
+</div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <!-- <section class="project-section">
+    <p class="section-label">— About the Project</p>
+    <h3>Overview</h3>
+    <p>This project focused on creating a multi-part video series about lunar exploration. There are four episodes total, each with two different sessions: Subject-Matter Expert sessions filmed in the studio, and Experiential Field Reports filmed on location.</p>
+  </section> -->
+
+  <!-- PROCESS -->
+  <section class="project-section">
+    <p class="section-label">— How It Was Made</p>
+    <h3>Process</h3>
+    <p>Because the assignment was to complete the project within 4 hours, I was not able to do as much prep work as I would have liked. However, I did connect with the other Creative Technologies seniors in my class and schedule four interviews. I also decided what kind of video/audio equipment I would need.<br><br>I filmed interviews with a DSLR camera, boom mic, and tripod. I also went around the lab and filmed som b-roll.<br><br>I edited together the interviews and b-roll in Adobe Premiere Pro and After Effects. I also added in some music to make it more engaging.</p>
+  </section>
+
+
+  <!-- RESULTS -->
+  <section class="project-section">
+    <p class="section-label">— Outcomes</p>
+    <h3>Results</h3>
+    <p>The short film was well received once the showcase began. The professor shows the short documentary to students who are interested in the Creative Technologies program so that they can get an insider student's perspective.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="project-section">
+    <p class="section-label">— Behind the Scenes</p>
+    <h3>Gallery</h3>
+    <div class="gallery-grid">
+      <img src="images/CRTJourney/CRTJ1.png" alt="I filmed broll in-between interviews." class="gallery-item">
+      <img src="images/CRTJourney/CRTJ2.png" alt="Interview with Zoe Robinson" class="gallery-item">
+      <img src="images/CRTJourney/CRTJ3.png" alt="Interview with Colt Foster" class="gallery-item">
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-image" id="lightbox-img" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
+  </div>
+
+  <!-- NAVIGATION FOOTER -->
+  <section class="project-nav-section">
+    <a href="VideoAudio.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Back to Video &amp; Audio</span>
+    </a>
+    <!-- Replace Project2.html with your actual next project filename -->
+    <!-- <a href="Project2.html" class="project-nav-btn next">
+      <span class="nav-label">Next Project</span>
+      <span class="nav-direction">→</span>
+    </a> -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="Alyssa Freyman logo" class="footer-logo">
+        <p>Alyssa Freyman</p>
+      </div>
+      <div class="footer-right">
+        <p>Email: hello@example.com</p>
+        <p>Phone: +1 123 456 7890</p>
+        <p>© 2026 Alyssa Freyman</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

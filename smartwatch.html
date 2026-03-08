@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Helping Hands — a fully programmed smartwatch with PCB design, 3D printed enclosure, and four custom screens, by Alyssa Freyman.">
+  <title>Helping Hands Smartwatch | Alyssa Freyman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— Physical Prototyping &amp; Interaction Design</p>
+        <h2>Helping<br>Hands</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>A fully functional smartwatch built from the ground up — custom PCB schematic, 3D printed enclosure, and four programmed screens including an analog clock, digital clock, real-time weather app, and a reaction-time game.</p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">Solo — PCB Design, Enclosure Design, Programming, UI Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">EasyEDA, Fusion 360, Arduino, 3D Printer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Languages</span>
+            <span class="meta-value">Arduino (C++)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Physical Prototyping &amp; Embedded Systems Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STAT BAR ── -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Programmed screen modes</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">4</span>
+      <span class="stat-label">PCB layers</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">19</span>
+      <span class="stat-label">Arduino code tabs</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Physical buttons</span>
+    </div>
+  </div>
+
+  <!-- ── THE CHALLENGE ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 01</p>
+        <h3>The Challenge</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Building a wearable device from scratch requires coordinating hardware, software, and physical design simultaneously — a constraint that forces every decision to account for all three layers at once. A PCB layout choice affects what's possible in the enclosure. An enclosure dimension affects button placement. Button placement affects the interaction model in code.</p>
+        <p>The goal was to produce a fully functional smartwatch — not a mockup or simulation — with a real PCB, a 3D printed case that fit correctly, and firmware that ran reliably across four distinct interaction modes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLANNING & DESIGN ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 02</p>
+        <h3>Planning &amp; Design</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Before any physical work began, I completed three parallel planning tracks — schematic design, enclosure design, and UI moodboarding — so that all three dimensions of the project could be developed with awareness of each other.</p>
+
+        <div class="tech-steps">
+          <div class="tech-step">
+            <span class="tech-step-num">01</span>
+            <div class="tech-step-body">
+              <h4>PCB Schematic — EasyEDA</h4>
+              <p>The watch used a 4-layer PCB. The component layout and part list were provided by the professor; my task was to design all the wire connections between components in EasyEDA, producing a clean schematic that could be manufactured reliably.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">02</span>
+            <div class="tech-step-body">
+              <h4>Enclosure Design — Fusion 360</h4>
+              <p>I designed the full watch enclosure in Fusion 360, including watchband slots and cutouts for the display and three side buttons. The design had to account for the exact dimensions of the PCB and components to ensure everything fit correctly once assembled.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">03</span>
+            <div class="tech-step-body">
+              <h4>UI Moodboarding</h4>
+              <p>Before writing any code, I researched existing watch and app design for visual inspiration — looking at color palettes, typography choices, and layout conventions across consumer smartwatches. I created a moodboard for each of the four screens to establish a consistent visual language before implementation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="graph-comparison" style="margin-top: 24px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">PCB Schematic</span>
+            </div>
+            <img src="images/smartwatch/schematic.png"
+                 alt="EasyEDA PCB schematic showing component connections"
+                 class="graph-image"/>
+            <p class="graph-caption">The 4-layer PCB schematic designed in EasyEDA, showing all component wire connections.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">3D PCB Rendering</span>
+            </div>
+            <img src="images/smartwatch/pcb-3d.png"
+                 alt="3D PCB layout rendering"
+                 class="graph-image"/>
+            <p class="graph-caption">2D rendering of the final PCB layout before fabrication.</p>
+          </div>
+        </div>
+
+        <div class="graph-comparison" style="margin-top: 24px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">3D Enclosure Render</span>
+            </div>
+            <img src="images/smartwatch/enclosure-3d.png"
+                 alt="3D render of watch enclosure in Fusion 360"
+                 class="graph-image"/>
+            <p class="graph-caption">Side-view 3D render of the watch enclosure in Fusion 360, showing the watchband slot and button cutouts.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">3D Printed Prototype</span>
+            </div>
+            <img src="images/smartwatch/printed-model.png"
+                 alt="3D printed enclosure prototype"
+                 class="graph-image"/>
+            <p class="graph-caption">The 3D printed enclosure prototype used to verify fit before final assembly. Adjustments were made based on how components seated inside.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROGRAMMING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 03</p>
+        <h3>Programming</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The watch firmware was written in Arduino (C++) across 19 separate tabs, each handling a distinct part of the system. The three physical side buttons were mapped to specific functions across all modes:</p>
+        <ul class="case-list">
+          <li><strong>Button 1</strong> — toggles the display in and out of sleep mode to conserve battery.</li>
+          <li><strong>Button 2</strong> — cycles through the four watch face modes (analog → digital → weather → game).</li>
+          <li><strong>Button 3</strong> — context-sensitive; used as the reaction input in the game screen.</li>
+        </ul>
+        <div class="case-callout">
+          <strong>Design decision:</strong> Keeping Button 2 as a global mode-switcher regardless of which screen is active meant users never needed to "go home" before switching modes — a deliberate choice to reduce interaction steps and match how people use real smartwatches.
+        </div>
+        <img src="images/smartwatch/arduino-code.png"
+             alt="Arduino code in the development environment"
+             class="project-image"
+             style="margin-top: 16px;"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL SCREENS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 04</p>
+        <h3>Final Screens</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Each of the four screens was designed with its own visual identity, informed by the moodboarding phase. The goal was for each mode to feel purposefully designed rather than like a default UI dump.</p>
+
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Analog Watch Face</span>
+            </div>
+            <img src="images/smartwatch/screen-analog.png"
+                 alt="Analog watch face screen"
+                 class="graph-image"/>
+            <p class="graph-caption">A blue/purple color scheme with traditional hour and minute hands. Inspired by premium watch face aesthetics.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Digital Watch Face</span>
+            </div>
+            <img src="images/smartwatch/screen-digital.png"
+                 alt="Digital watch face screen"
+                 class="graph-image"/>
+            <p class="graph-caption">Clean digital time display with date and secondary information — designed for fast readability.</p>
+          </div>
+        </div>
+
+        <div class="graph-comparison" style="margin-top: 24px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Weather App</span>
+            </div>
+            <img src="images/smartwatch/screen-weather.png"
+                 alt="Real-time weather app screen"
+                 class="graph-image"/>
+            <p class="graph-caption">Pulls live weather data for Atlanta, displaying current conditions with icons and temperature in real time.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Reaction Game</span>
+            </div>
+            <img src="images/smartwatch/screen-game.png"
+                 alt="Reaction time game screen"
+                 class="graph-image"/>
+            <p class="graph-caption">Screen starts red — press Button 3 as fast as possible when it turns green. Reaction time is displayed in milliseconds, then resets.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL PRODUCT ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 05</p>
+        <h3>Final Product</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The assembled watch combines the fabricated PCB, 3D printed enclosure, and all programmed firmware into a single wearable device. The enclosure fits the PCB cleanly with all three buttons accessible and the display seated correctly behind the screen cutout.</p>
+        <img src="images/smartwatch/final-product.png"
+             alt="Final assembled Helping Hands smartwatch"
+             class="project-image"/>
+
+        <!-- <div class="gallery-grid" style="margin-top: 24px;">
+          <img src="images/smartwatch/gallery1.png" alt="Helping Hands smartwatch detail view" class="gallery-item">
+          <img src="images/smartwatch/gallery2.png" alt="Helping Hands smartwatch being worn" class="gallery-item">
+          <img src="images/smartwatch/gallery3.png" alt="Helping Hands smartwatch side view" class="gallery-item">
+          <img src="images/smartwatch/gallery4.png" alt="Helping Hands smartwatch screen detail" class="gallery-item">
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIDEO DEMO ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 06</p>
+        <h3>Demo</h3>
+      </div>
+      <div class="case-body-col">
+        <p>A demonstration of all four screen modes in action — including the live weather data pull and the reaction-time game.</p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID"
+            title="Helping Hands Smartwatch Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAKEAWAYS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 07</p>
+        <h3>Takeaways</h3>
+      </div>
+      <div class="case-body-col">
+        <p>This project was my first experience designing at the hardware level — where design decisions are physical and irreversible in a way that software never is. Getting the enclosure dimensions wrong by a millimeter means reprinting. Getting a wire connection wrong in the schematic means the board doesn't work. That constraint forces a kind of precision and forethought that I found genuinely different from purely digital work.</p>
+        <p>The most satisfying part was seeing all three layers — hardware, software, and physical design — come together into something you can actually wear. Building a functioning wearable device from a blank schematic is a very different experience from designing an interface in Figma, and it gave me a much deeper appreciation for the engineering constraints that sit beneath every consumer product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT NAVIGATION ── -->
+  <section class="project-nav-section" style="justify-content: flex-start;">
+    <a href="TechProj.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Back to UX / UI</span>
+    </a>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-caption"></p>
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

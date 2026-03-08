@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Audible Redesign — a UX research and prototyping project improving how Audible surfaces included subscription titles, by Alyssa Freyman.">
+  <title>Audible Redesign | Alyssa Freyman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— UX Research &amp; Design</p>
+        <h2>Audible<br>Redesign</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>Audible advertises thousands of included titles — but finding them is surprisingly difficult. I ran a full UX research study to understand why, then designed and tested a solution that makes subscription value immediately visible to users.</p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">Solo UX Researcher &amp; Designer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Methods</span>
+            <span class="meta-value">Survey, Think-Aloud Interviews, Heuristic Evaluation, Prototyping</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Figma, PeerSurvey, Google Forms</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic UX Research Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STAT BAR ── -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <span class="stat-number">20+</span>
+      <span class="stat-label">Survey participants</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">2</span>
+      <span class="stat-label">Think-aloud interviews</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Prototypes tested</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">14</span>
+      <span class="stat-label">Survey questions</span>
+    </div>
+  </div>
+
+  <!-- ── THE PROBLEM ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 01</p>
+        <h3>The Problem</h3>
+      </div>
+      <div class="case-body-col">
+        <p>For around $8 a month, Audible promises access to thousands of included audiobooks and Originals. But after using the app, I found it surprisingly difficult to find those titles — the interface primarily surfaces content that costs additional fees, with no clear way to filter for what's already included in your subscription.</p>
+        <p>This frustrated me enough that I eventually cancelled. But rather than just leaving, I wanted to understand whether this was a personal pain point or a systemic usability issue — and design a fix.</p>
+        <div class="case-callout">
+          <strong>The core hypothesis:</strong> If users could easily see the thousands of titles they're already paying for, they would perceive the subscription as more valuable — and be less likely to cancel.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEEDFINDING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 02</p>
+        <h3>Needfinding</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Before designing anything, I needed to validate whether other users experienced the same friction. I ran a multi-method research study over approximately one week, collecting both quantitative and qualitative data.</p>
+
+        <div class="tech-steps">
+          <div class="tech-step">
+            <span class="tech-step-num">01</span>
+            <div class="tech-step-body">
+              <h4>Online Survey — 20+ Participants</h4>
+              <p>A 14-question survey built in PeerSurvey and Google Forms, shared via Instagram and a class discussion board. I recruited participants of varying ages, genders, locations, and levels of Audible experience to avoid a narrow sample. Questions mixed quantitative (nominal and ordinal scale) with qualitative open-response formats, designed to complete in 7–10 minutes.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">02</span>
+            <div class="tech-step-body">
+              <h4>Think-Aloud Interviews — 2 Participants</h4>
+              <p>Two in-person interviews conducted in the Atlanta area with Audible novices of different ages. Participants navigated the app while narrating their actions, revealing where they naturally looked for included content — and where they got stuck. The think-aloud format surfaced confusion that post-task surveys alone would have missed.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">03</span>
+            <div class="tech-step-body">
+              <h4>Heuristic Evaluation</h4>
+              <p>An individual evaluation of the existing Audible interface against established usability heuristics — identifying specific points where the app violated principles like visibility of system status, recognition over recall, and consistency with user expectations.</p>
+            </div>
+          </div>
+        </div>
+
+        <img src="images/Audible/survey-questions.png"
+             alt="Survey question list"
+             class="project-image"
+            style="max-height: 500px; width: auto; margin: 0 auto; margin-top: 8px;"/>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── KEY FINDINGS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 03</p>
+        <h3>Key Findings</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The research confirmed that my frustration was widely shared. Several patterns emerged consistently across all three methods:</p>
+        <ul class="case-list">
+          <li><strong>Users couldn't find included titles</strong> — the majority of survey respondents reported difficulty distinguishing between included and paid content in the app.</li>
+          <li><strong>The home page buries subscription value</strong> — think-aloud participants consistently scrolled past included content without recognizing it, drawn instead to prominently featured paid titles.</li>
+          <li><strong>No persistent filter existed</strong> — users had to re-navigate to find included content every session, relying on recall rather than recognition — a direct violation of a core usability heuristic.</li>
+          <li><strong>Collection management was inconsistent</strong> — the "Add to Library" flow differed from familiar patterns on Spotify and Pinterest, causing confusion about how to organize saved titles.</li>
+        </ul>
+        <div class="case-callout">
+          <strong>The insight that shaped the design:</strong> The problem wasn't that included titles didn't exist in the app — it was that the interface made them invisible by default. The fix didn't require a major redesign, just better filtering and persistent state.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROTOTYPING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 04</p>
+        <h3>Prototyping</h3>
+      </div>
+      <div class="case-body-col">
+        <p>I started with low-fidelity card-based prototypes — physical cards gave me the flexibility to quickly rearrange, swap, and iterate based on participant reactions without committing to any one direction.</p>
+        <p>Three distinct concepts were tested:</p>
+
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag before">Prototype 1</span>
+            </div>
+            <img src="images/Audible/prototype1.png"
+                 alt="Prototype 1 — included titles filter on Discover page"
+                 class="graph-image"/>
+            <p class="graph-caption">An "Included Titles" checkbox filter at the top of the Discover page, appearing after selecting a genre. Keeps filtering contextual to where users are browsing.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag after">Prototype 2</span>
+            </div>
+            <img src="images/Audible/prototype2.png"
+                 alt="Prototype 2 — included titles filter on home page"
+                 class="graph-image"
+                style="max-height: 300px; width: auto; margin: 0 auto;"/>
+            <p class="graph-caption">The filter moved to the home page — the first screen users see. Reduces reliance on recall by making included content accessible from the entry point.</p>
+          </div>
+        </div>
+
+        <div class="graph-comparison" style="margin-top: 24px;">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-tag" style="background: rgba(171,195,172,0.2); color: var(--sage-dark);">Prototype 3</span>
+            </div>
+            <img src="images/Audible/prototype3.png"
+                 alt="Prototype 3 — collection management redesign"
+                 class="graph-image"/>
+            <p class="graph-caption">A redesigned "Add to Library" flow with a collections dropdown — consistent with familiar save patterns on Spotify and Pinterest, reducing cognitive load when organizing titles.</p>
+          </div>
+          <div class="graph-item" style="visibility: hidden;"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL DESIGN ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 05</p>
+        <h3>Final Design</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The final prototype combined the strongest elements of Prototype 1 and Prototype 3, built in Figma using real Audible interface components for fidelity.</p>
+        <ul class="case-list">
+          <li><strong>Persistent included-titles filter</strong> — a checkbox filter on the Discover page that remembers its state as users navigate between genres. If you turn it on in Sci-Fi, it stays on in Romance — eliminating the need to re-apply it every session.</li>
+          <li><strong>Clearer visual hierarchy</strong> — included titles are surfaced more prominently within filtered results, reducing the chance users mistake paid content for included content.</li>
+          <li><strong>Collections dropdown on "Add to Library"</strong> — tapping the button now reveals a scrollable list of existing collections plus a "New Collection" option, with a confirmation toast at the bottom of the screen matching patterns users already know from other apps.</li>
+        </ul>
+
+  <div class="graph-item" style="margin-top: 8px;">
+  <div class="graph-label-bar">
+    <span class="graph-title">Figma Workspace</span>
+  </div>
+  <img src="images/Audible/figma-workspace.png"
+       alt="Final prototype being built in Figma"
+       class="graph-image"
+       style="max-height: 500px; width: auto; margin: 0 auto;"/>
+  <p class="graph-caption">Building the final prototype in Figma using Audible's existing interface components to maintain visual fidelity.</p>
+</div>
+
+<div class="graph-comparison" style="margin-top: 24px;">
+  <div class="graph-item">
+    <div class="graph-label-bar">
+      <span class="graph-title">Discover Page</span>
+    </div>
+    <img src="images/Audible/final-discover.png"
+         alt="Final prototype Discover page with included titles filter"
+         class="graph-image"
+         style="max-height: 500px; width: auto; margin: 0 auto;"/>
+    <p class="graph-caption">The Discover page with the included-titles checkbox filter applied. The page refreshes to show only subscription-included content.</p>
+  </div>
+  <div class="graph-item">
+    <div class="graph-label-bar">
+      <span class="graph-title">Collections Flow</span>
+    </div>
+    <img src="images/Audible/final-collections.png"
+         alt="Final prototype collections dropdown"
+         class="graph-image"
+         style="max-height: 500px; width: auto; margin: 0 auto;"/>
+    <p class="graph-caption">The redesigned "Add to Library" flow showing the collections dropdown and confirmation toast at the bottom of the screen.</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- ── VIDEO DEMO ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 06</p>
+        <h3>Demo</h3>
+      </div>
+      <div class="case-body-col">
+        <p>A walkthrough of the final Figma prototype demonstrating the included-titles filter, persistent state across genres, and the redesigned collections flow.</p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/QQ8fkGLnaDU"
+            title="Audible Redesign — Prototype Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAKEAWAYS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 07</p>
+        <h3>Takeaways</h3>
+      </div>
+      <div class="case-body-col">
+        <p>This project reinforced a principle I now apply to every design problem: the most impactful UX changes are often not the most dramatic ones. Audible didn't need a visual overhaul — it needed a persistent filter and a more honest information hierarchy. Two targeted changes with significant impact on perceived value.</p>
+        <p>Running research across three methods also showed me how much each method reveals that the others miss. Survey data told me the problem was widespread. Think-aloud interviews showed me exactly where users got confused. The heuristic evaluation gave me the vocabulary to articulate why. Together they built a much stronger case for the design decisions than any single method would have.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT NAVIGATION ── -->
+  <section class="project-nav-section">
+    <a href="NightAtTheLibrary.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Previous Project</span>
+    </a>
+    <a href="YourSurvey.html" class="project-nav-btn next">
+      <span class="nav-label">Next Project</span>
+      <span class="nav-direction">→</span>
+    </a>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-caption"></p>
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

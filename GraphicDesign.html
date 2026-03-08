@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UX / UI Projects</title>
+  <meta name="description" content="Graphic design projects by Alyssa Freyman">
+  <title>Graphic Design | Alyssa Freyman</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
   <!-- Header / Nav -->
   <header>
     <nav>
-      <h1>Alyssa Freyman</h1>
-      <ul>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li class="dropdown">
-          <a href="index.html#work">Work ▾</a>
+          <a href="#">Work ▾</a>
           <ul class="dropdown-menu">
             <li><a href="VideoAudio.html">Video / Audio</a></li>
             <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
           </ul>
         </li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -27,63 +39,70 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>UX / UI Projects</h2>
-    <p>Here are some examples of my UX and UI work, showcasing design thinking, usability, and visual storytelling.</p>
+  <!-- Page Hero -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— Work / Graphic &amp; Design</p>
+        <h2>Graphic<br>Design</h2>
+      </div>
+      <div class="project-hero-right">
+        <p> Proficient in Adobe Illustrator, Adobe Photoshop, and Procreate, I approach every design with a strong foundation in typography and colour theory. The projects below are concept briefs — detailed brand identities built from the ground up, complete with style guides, colour palettes, and collateral.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Grid -->
   <section id="ux-ui-work">
-    <div class="grid">
+    <p class="section-label">— Selected Projects</p>
+    <div class="project-grid">
+
       <!-- Project 1 -->
-      <div class="card">
-        <img src="images/UXProject1.jpg" alt="Project 1 Screenshot" class="card-image">
-        <h3>Mobile App Redesign</h3>
-        <p>Redesigned the user flow and interface for a mobile shopping app to increase conversion and engagement.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
+      <a href="Inkwell.html" class="project-card">
+        <div class="card-thumb">
+        <img src="images/Inkwell/brand.png" alt="Web Dashboard Design thumbnail" class="card-image" style="object-fit: contain; background-color: var(--cream); height: auto; max-height: 300px;">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Branding</span>
+          <h3>Inkwell & Isle</h3>
+          <p>Created branding for a small coastal bookshop.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
 
       <!-- Project 2 -->
-      <div class="card">
-        <img src="images/UXProject2.jpg" alt="Project 2 Screenshot" class="card-image">
-        <h3>Web Dashboard Design</h3>
-        <p>Created an interactive dashboard with intuitive navigation for a business analytics tool.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
+      <a href="NeonPerch.html" class="project-card">
+        <div class="card-thumb">
+        <img src="images/NeonPerch/fullBrand.png" alt="Web Dashboard Design thumbnail" class="card-image" style="object-fit: contain; background-color: var(--cream); height: auto; max-height: 300px;">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Branding</span>
+          <h3>The Neon Perch</h3>
+          <p>Created branding for a late-night cafe.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
 
-      <!-- Project 3 -->
-      <div class="card">
-        <img src="images/UXProject3.jpg" alt="Project 3 Screenshot" class="card-image">
-        <h3>Wireframes & Prototypes</h3>
-        <p>Developed wireframes and prototypes for a cross-platform app, focusing on user testing insights.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="card">
-        <img src="images/UXProject4.jpg" alt="Project 4 Screenshot" class="card-image">
-        <h3>Website Redesign</h3>
-        <p>Redesigned a marketing website for a client, improving accessibility, responsiveness, and clarity.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-left">
-        <img src="images/logo.png" alt="Logo" class="footer-logo">
-        <p>Alyssa Freyman</p>
-      </div>
-      <div class="footer-right">
-        <p>Email: hello@example.com</p>
-        <p>Phone: +1 123 456 7890</p>
-        <p>© 2026 Alyssa Freyman</p>
-      </div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
     </div>
-  </footer>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

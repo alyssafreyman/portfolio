@@ -3,126 +3,233 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exploring the Moon Series</title>
+  <meta name="description" content="Exploring the Moon — a cinematic educational video series about NASA's Artemis Missions, produced by Alyssa Freyman.">
+  <title>Exploring the Moon | Alyssa Freyman</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
   <header>
     <nav>
-      <h1>Alyssa Freyman</h1>
-      <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li class="dropdown">
-      <a href="#work">Work ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="VideoAudio.html">Video / Audio</a></li>
-        <li><a href="TechProj.html">UX / UI</a></li>
-        <li><a href="GraphicDesign.html">Graphics</a></li>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
-    </li>
-    <li><a href="index.html#contact">Contact</a></li>  </ul>
-</nav>
+    </nav>
   </header>
 
-<!-- PROJECT HERO -->
-<section class="project-hero">
-  <div class="project-hero-content">
-    <div class="project-hero-left">
-      <h2>Exploring the Moon Series</h2>
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— Video &amp; Audio / Documentary Series</p>
+        <h2>Exploring<br>the Moon</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>A cinematic educational video series designed to make lunar science accessible and engaging. This project blends storytelling, research, and visual design to create an immersive educational experience about NASA's Artemis Missions.</p>
+
+        <!-- Project meta -->
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Role</span>
+            <span class="meta-value">Production Assistant, Set Designer, Script Writer</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Format</span>
+            <span class="meta-value">Documentary Series</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Episodes</span>
+            <span class="meta-value">4 Episodes</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Platform</span>
+            <span class="meta-value">YouTube</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="project-hero-right">
-      <p>
-        A cinematic educational video series designed to make lunar science accessible and engaging.
-        This project blends storytelling, research, and visual design to create an immersive
-        educational experience.
-      </p>
+  </section>
+
+  <!-- FEATURED VIDEO EMBED -->
+  <section class="project-section video-section">
+    <!-- <p class="section-label">— Episode 1</p> -->
+    <h3>Watch the First Episode</h3>
+<div class="video-wrapper-link">
+  <a href="https://youtu.be/OOGa-gDr8y4" target="_blank" rel="noopener">
+    <img src="images/ExploringTheMoon/ETM1.jpg" alt="Watch Episode 1 on YouTube" class="video-thumb-link">
+    <div class="video-thumb-play">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="6,4 20,12 6,20"/>
+      </svg>
     </div>
-  </div>
-</section>
-
-<!-- IMAGE SECTION -->
-<section class="project-section">
-  <img src="images/ExploringTheMoon/ETM1.jpg" alt="Moon Project Image" class="project-image">
-</section>
-
-<!-- OVERVIEW -->
-<section class="project-section">
-  <h3>Overview</h3>
-  <p>
-    This project focused on creating a multi-part video series about lunar exploration.
-    I handled scripting, filming, editing, motion graphics, and sound design. <br><br>There are five episodes total, with two different sessions for each episode: Subject-Matter Expert (in the studio) and Experiential Field Reports (in the field)​. 
-  </p>
-</section>
-
-<!-- PROCESS -->
-<section class="project-section">
-  <h3>Process</h3>
-  <p>
-    The project began with research and storyboarding. I developed a narrative structure
-    that balanced scientific accuracy with emotional storytelling.
-  </p>
-</section>
-
-<!-- RESULTS -->
-<section class="project-section">
-  <h3>Results</h3>
-  <p>
-    The series increased engagement by 40% and received positive feedback for clarity
-    and visual storytelling.
-  </p>
-</section>
-
-<!-- GALLERY -->
-<section class="project-section">
-  <!-- <h3>Gallery</h3> -->
-
-  <div class="gallery-grid">
-    <img src="images/ExploringTheMoon/ETM1.jpg" 
-         alt="Opening title sequence design"
-         class="gallery-item">
-
-    <img src="images/ExploringTheMoon/ETM2.jpg" 
-         alt="Behind the scenes filming setup"
-         class="gallery-item">
-
-    <img src="images/ExploringTheMoon/ETM3.jpg" 
-         alt="Motion graphics lunar animation"
-         class="gallery-item">
-
-    <img src="images/ExploringTheMoon/ETM4.jpg" 
-         alt="Color grading and final edit"
-         class="gallery-item">
-  </div>
-</section>
-
-<!-- LIGHTBOX MODAL -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-image" id="lightbox-img">
-  <p class="lightbox-caption" id="lightbox-caption"></p>
-  <div class="arrow left">&#10094;</div>
-  <div class="arrow right">&#10095;</div>
+  </a>
 </div>
+  </section>
 
-<!-- BACK BUTTON -->
-<section class="project-section">
-  <a href="VideoAudio.html" class="btn">← Back to Video / Audio</a>
-</section>
+  <!-- OVERVIEW -->
+  <section class="project-section">
+    <p class="section-label">— About the Project</p>
+    <h3>Overview</h3>
+    <p>This project focused on creating a multi-part video series about lunar exploration. There are four episodes total, each with two different sessions: Subject-Matter Expert sessions filmed in the studio, and Experiential Field Reports filmed on location.</p>
+  </section>
 
-<footer>
+  <!-- PROCESS -->
+  <section class="project-section">
+    <p class="section-label">— How It Was Made</p>
+    <h3>Process</h3>
+    <p>Before filming interviews, I helped in the planning process. Because we were planning to do so many episodes for this series, I put together a task checklist on Excel to keep everyone on the the up-to-date and on track. I also helped write some of the opening scripts and put it in a Teleprompter format. <br><br>On set, I mostly acted as a Production Assistant. I helped set up the equipment, took care of the talent, and worked the teleprompter. On day on set, I acted as Studio Operator.<br><br>In the post-production phase, we found that we had filmed a lot of interesting footage in the studios, but we were unsure of what to cut for the finished product. I pitched the idea of a focus group and held one with the interns. The target audience for the series was high school and college-aged students, which is why I mostly chose the interns for the focus group.</p>
+  </section>
+
+  <!-- ALL EPISODES -->
+  <section class="project-section">
+    <p class="section-label">— Full Series</p>
+    <h3>All Episodes</h3>
+    <div class="episode-grid">
+
+      <a href="https://youtu.be/OOGa-gDr8y4?si=lD2O5fx5QjNN5PAq" target="_blank" rel="noopener" class="episode-card active-episode">
+        <div class="episode-thumb">
+          <img src="images/ExploringTheMoon/ETM1.jpg" alt="Episode 1 thumbnail">
+          <div class="episode-play">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="6,4 20,12 6,20"/>
+            </svg>
+          </div>
+        </div>
+        <div class="episode-info">
+          <span class="episode-num">Episode 1</span>
+          <p class="episode-title">Exploring the Moon: Special Lunar Challenges</p>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/BcZmSc6mYKY?si=1QWoEeC9hwIvBhHY" target="_blank" rel="noopener" class="episode-card">
+        <div class="episode-thumb">
+          <img src="images/ExploringTheMoon/ETM2.jpg" alt="Episode 2 thumbnail">
+          <div class="episode-play">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="6,4 20,12 6,20"/>
+            </svg>
+          </div>
+        </div>
+        <div class="episode-info">
+          <!-- <span class="episode-num">Episode 2</span> -->
+          <p class="episode-title">Exploring the Moon: Artemis Spacesuits</p>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/plscKHE_j6E?si=DtTsHMFAxjUZR9XL" target="_blank" rel="noopener" class="episode-card">
+        <div class="episode-thumb">
+          <img src="images/ExploringTheMoon/ETM3.jpg" alt="Episode 3 thumbnail">
+          <div class="episode-play">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="6,4 20,12 6,20"/>
+            </svg>
+          </div>
+        </div>
+        <div class="episode-info">
+          <!-- <span class="episode-num">Episode 3</span> -->
+          <p class="episode-title">Exploring the Moon: Lunar Tools</p>
+        </div>
+      </a>
+
+      <a href="https://youtu.be/9gdjMt8SePc?si=57731ZHcmT_8pmgI" target="_blank" rel="noopener" class="episode-card">
+        <div class="episode-thumb">
+          <img src="images/ExploringTheMoon/ETM4.jpg" alt="Episode 4 thumbnail">
+          <div class="episode-play">
+            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="6,4 20,12 6,20"/>
+            </svg>
+          </div>
+        </div>
+        <div class="episode-info">
+          <span class="episode-num">Episode 4</span>
+          <p class="episode-title">Exploring the Moon: Lunar Rovers</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="project-section">
+    <p class="section-label">— Outcomes</p>
+    <h3>Results</h3>
+    <p>The series became quite popular on the Learn With NASA YouTube channel. While most of the episodes had about 3k views, the Lunar Rovers episode had about 9.1k views.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="project-section">
+    <p class="section-label">— Behind the Scenes</p>
+    <h3>Gallery</h3>
+    <div class="gallery-grid">
+      <img src="images/ExploringTheMoon/ETMBS1.png" alt="Set design (top) and actual set (bottom)" class="gallery-item">
+      <!-- <img src="images/ExploringTheMoon/ETMBS2.png" alt="Wrting scripts for teleprompter." class="gallery-item"> -->
+      <img src="images/ExploringTheMoon/ETMBS4.png" alt="Behind the scenes of the Geology Tools episode." class="gallery-item">
+      <img src="images/ExploringTheMoon/ETMBS5.png" alt="I acted as a Studio Manager for the Lunar Rover episode." class="gallery-item">
+      <img src="images/ExploringTheMoon/ETMBS6.png" alt="The focus group watching one of the episodes." class="gallery-item">
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-image" id="lightbox-img" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
+  </div>
+
+  <!-- NAVIGATION FOOTER -->
+  <section class="project-nav-section">
+    <a href="VideoAudio.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Back to Video &amp; Audio</span>
+    </a>
+    <!-- Replace Project2.html with your actual next project filename -->
+    <a href="WhatsBehindThisDoor.html" class="project-nav-btn next">
+      <span class="nav-label">Next Project</span>
+      <span class="nav-direction">→</span>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
   <div class="footer-container">
     <div class="footer-left">
-      <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
       <p>Alyssa Freyman</p>
     </div>
+
     <div class="footer-right">
-      <p>Email: hello@example.com</p>
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
       <p>© 2026 Alyssa Freyman</p>
     </div>
   </div>
 </footer>
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
+
 </body>
 </html>

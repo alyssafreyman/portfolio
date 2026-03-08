@@ -13,7 +13,12 @@
 </head>
 
 <body>
-
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <!-- Arrow shaft -->
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
   <header>
     <nav>
       <h1>Alyssa Freyman</h1>
@@ -44,11 +49,14 @@
     <h2>About Me</h2>
     <p>I've always had a passion for creating innovative projects, whether through graphic design, videography, or UX/UI design. With a BA in Communications (Filmmaking) and Creative Technologies from Berry College, I've had the privilege of working on a wide range of exciting projects since then. Currently, I'm earning my Masters in Computer Science from the Georgia Institute of Technology.<br><br>
 Having worked across various aspects of communication and technology, I feel incredibly fortunate to do what I love every day. From capturing stunning visuals to meeting people from all walks of life, I’m constantly learning and growing in my craft. I’m always eager for the next challenge, so if you have an idea and are looking to collaborate, I'd love to hear from you.</p>
-  </section>
+<div style="margin-top: 24px;">
+  <a href="files/Alyssa_Resume.pdf" target="_blank" class="btn">View Resume</a>
+</div>
+</section>
 
   <section id="work">
   <h2>My Work</h2>
-  <p>Like some of the examples below? Click on one of the keychains to see more of my work.</p>
+  <p>A few things I've been working on. Grab a keychain to explore more!</p>
 
   <div class="work-layout">
     <div class="keyring">
@@ -67,15 +75,19 @@ Having worked across various aspects of communication and technology, I feel inc
       </a>
     </div>
 
-    <div class="grid">
+<div class="grid" style="grid-template-columns: repeat(3, 1fr);">
     <div class="card">
-        <img src="images/ExploringTheMoon/ETM1.jpg" alt="Project 1 Screenshot" class="card-image">
+        <img src="images/ExploringTheMoon/ETM1.jpg" alt="Project 1 Screenshot" class="card-image" href="ExploringTheMoon.html">
         <h3>Exploring the Moon series</h3>
     </div>
     <div class="card">
-        <img src="images/AudibleRedesign/Audible1.jpg" alt="Project 2 Screenshot" class="card-image">
+        <img src="images/Audible/final-discover.png" alt="Project 2 Screenshot" class="card-image">
         <h3>Audible App Redesign</h3>
       </div>
+      <div class="card">
+        <img src="images/Inkwell/brand.png" alt="Project 1 Screenshot" class="card-image">
+        <h3>Inkwell & Isle</h3>
+    </div>
     </div>
   </div>
 </section>
@@ -91,13 +103,13 @@ Having worked across various aspects of communication and technology, I feel inc
 <footer>
   <div class="footer-container">
     <div class="footer-left">
-      <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
       <p>Alyssa Freyman</p>
     </div>
 
     <div class="footer-right">
-      <p>Email: hello@example.com</p>
-      <p>Phone: +1 123 456 7890</p>
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
       <p>© 2026 Alyssa Freyman</p>
     </div>
   </div>

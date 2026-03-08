@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Inkwell & Isle — Brand Identity</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Palette swatches & logo cards — purely structural, no brand overrides */
+  .swatch-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    flex: 1;
+    min-width: 110px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: var(--shadow-sm);
+  }
+  .swatch-block { height: 90px; }
+  .swatch-info  { padding: 12px 14px; background: var(--white); }
+  .swatch-info strong { display:block; font-size:.9rem; color:var(--ink); font-weight:600; margin-bottom:2px; }
+  .swatch-info span   { font-size:.78rem; color:var(--muted); }
+
+  .logo-trio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .logo-panel {
+    border-radius: var(--radius-md);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-panel img {
+    max-width: 170px;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  .logo-panel .panel-label {
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .type-card {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 700px) {
+    .logo-trio  { grid-template-columns: 1fr 1fr; }
+    .type-grid  { grid-template-columns: 1fr; }
+    .swatch-row { gap: 10px; }
+    .swatch     { min-width: 80px; }
+    .gallery-grid img[style*="grid-column"] { grid-column: span 1 !important; aspect-ratio: 4/3 !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 3l14 9-7 1-4 7L5 3z" fill="#1a1a18" stroke="#fff" stroke-width="1"/>
+  </svg>
+</div>
+
+<!-- Header / Nav -->
+<header id="site-header">
+  <nav>
+    <h1>Alyssa</h1>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="dropdown">
+        <a href="index.html#work">Work ▾</a>
+           <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphic Design</a></li>
+          </ul>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<div class="project-hero fade-in">
+  <div class="project-hero-content">
+    <div class="project-hero-left">
+      <span class="page-label">Brand Identity &nbsp;·&nbsp; Graphic Design</span>
+      <h2>The Inkwell &amp; Isle</h2>
+    </div>
+    <div class="project-hero-right">
+      <p>
+        An independent "destination" bookstore perched on a coastal cliffside, specialising in rare 
+        travelogues, nautical maps, and adventure fiction. The brief: build a brand that feels like 
+        the private study of a 19th-century explorer — whimsical, scholarly, and unmistakably coastal 
+        — curated for a modern audience. <br>As a challenge for myself, I asked AI to create a fake business and their wants for branding. I then created branding and a style guide for that.
+      </p>
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Type</span>
+          <span class="meta-value">Concept Project</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Industry</span>
+          <span class="meta-value">Independent Retail</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Deliverables</span>
+          <span class="meta-value">Logo, Palette, Typography, Collateral</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Vibe</span>
+          <span class="meta-value">Coastal Academia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Overview Image -->
+<!-- <section class="project-section fade-in">
+  <img src="images/Inkwell/brand.png" alt="The Inkwell &amp; Isle brand overview" class="project-image" style="height: 200px; width: 200px;">
+</section> -->
+<section class="project-section fade-in">
+  <img src="images/Inkwell/fullBrand.png" alt="The Inkwell &amp; Isle brand overview" class="project-image" style="height:300;">
+</section> 
+<!-- Logo -->
+<section class="project-section fade-in" style="background:var(--cream-dark);">
+  <h3>The Badge Mark</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    A stamp-style emblem built around ship and book imagery — designed to look as good embossed 
+    on a linen book cover as it does printed on a shop window. Shown across light, parchment, and dark backgrounds.
+  </p>
+  <div class="logo-trio">
+    <div class="logo-panel" style="background:#ffffff; border:1px solid rgba(0,0,0,0.07);">
+      <img src="images/Inkwell/darkLogo.png" alt="Logo on white">
+      <span class="panel-label" style="color:var(--muted);">On White</span>
+    </div>
+    <div class="logo-panel" style="background:#f2ead8; border:1px solid rgba(0,0,0,0.07);">
+      <img src="images/Inkwell/darkLogo.png" alt="Logo on parchment">
+      <span class="panel-label" style="color:#8a7e6a;">On Parchment</span>
+    </div>
+    <div class="logo-panel" style="background:#213E98;">
+      <img src="images/Inkwell/lightLogo.png" alt="Logo on ink blue">
+      <span class="panel-label" style="color:#8fada3;">On Ink Blue</span>
+    </div>
+  </div>
+</section>
+
+<!-- Colour Palette -->
+<section class="project-section fade-in">
+  <h3>Colour Palette</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    Deep teal, weathered parchment, oxidised copper, and rich ink blue — colours that evoke salt air, 
+    aged paper, and the worn patina of a well-loved atlas.
+  </p>
+  <div class="swatch-row">
+    <div class="swatch">
+      <div class="swatch-block" style="background:#442F25;"></div>
+      <div class="swatch-info"><strong>English Walnut</strong><span>#442F25</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#A37E4F;"></div>
+      <div class="swatch-info"><strong>Deep Tan</strong><span>#A37E4F</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#f2ead8; border-bottom:1px solid #e0d8c8;"></div>
+      <div class="swatch-info"><strong>Parchment</strong><span>#F2EAD8</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#213E98;"></div>
+      <div class="swatch-info"><strong>Dark Steel Blue</strong><span>#213E98</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#6D8AE9;"></div>
+      <div class="swatch-info"><strong>Sky Blue</strong><span>#6D8AE9</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Typography -->
+<section class="project-section fade-in" style="background:var(--cream-dark);">
+  <h3>Typography</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    A classic serif with elegant ligatures for display headings, paired with a handwritten-style italic 
+    that reads like field-journal notes — scholarly but full of personality.
+  </p>
+  <div class="type-grid">
+    <div class="type-card">
+      <span class="meta-label" style="display:block; margin-bottom:14px;">Display &amp; Headings</span>
+      <p style="font-family:Georgia,serif; font-size:2.1rem; font-weight:700; line-height:1.15; color:var(--ink); margin-bottom:10px; letter-spacing:-0.01em;">The Horizon Awaits</p>
+      <span style="font-size:0.82rem; color:var(--sage-dark); font-weight:500;">Classic Serif — high contrast strokes, elegant ligatures</span>
+      <p style="margin-top:10px; font-size:0.83rem; color:var(--muted);">Aa Bb Cc Dd Ee — 0123456789</p>
+    </div>
+    <div class="type-card">
+      <span class="meta-label" style="display:block; margin-bottom:14px;">Accent &amp; Pull Quotes</span>
+      <p style="font-family:Montserrat,serif; font-style: italic; font-size:1.9rem; line-height:1.3; color:var(--muted); margin-bottom:10px;">Navigation &amp; Discovery</p>
+      <span style="font-size:0.82rem; color:var(--sage-dark); font-weight:500;">Handwritten Script — field notes &amp; captions</span>
+      <p style="margin-top:10px; font-style: italic; font-size:0.83rem; color:var(--muted);">Curious minds, open horizons.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Collateral -->
+<section class="project-section fade-in">
+  <h3>Brand Collateral</h3>
+  <p style="color:var(--muted); margin-bottom:28px; max-width:620px; line-height:1.8;">
+    Every purchase is placed in a branded paper bag or wrapped in paper with a branded wax seal. Other items are seen with the logo, such as the outdoor sign with monthly events or Book of the Month, a tote bag, a sticker, and a loyalty card.
+  </p>
+ <div class="gallery-grid" style="grid-template-columns: 1fr 1fr;">
+  <img src="images/Inkwell/loyaltyCard.png" alt="Loyalty card" class="gallery-item" style="height: 200px; object-fit: contain; aspect-ratio: unset;">
+  <img src="images/Inkwell/waxSeal.png"     alt="Wax seal"     class="gallery-item" style="height: 200px; object-fit: cover; aspect-ratio: unset;">
+  </div>
+<div class="gallery-grid" style="grid-template-columns: 1fr 1fr 1fr 1fr; justify-content: center; gap: 10px;">  
+<img src="images/Inkwell/outdoorSign.png" alt="Outdoor sign" class="gallery-item" style="height: 200px; width: 200px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream); margin: 0 auto;">
+<img src="images/Inkwell/sticker.png"     alt="Sticker"      class="gallery-item" style="height: 200px; width: 200px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream); margin: 0 auto;">
+<img src="images/Inkwell/tote.png"        alt="Tote bag"     class="gallery-item" style="height: 200px; width: 200px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream); margin: 0 auto;">
+<img src="images/Inkwell/bag.png"         alt="Bag"          class="gallery-item" style="height: 200px; width: 200px; object-fit: contain; aspect-ratio: unset; background-color: var(--cream); margin: 0 auto;">
+</div>
+</section>
+
+<!-- Project Nav -->
+<div class="project-nav-section">
+  <a href="GraphicDesign.html" class="project-nav-btn">
+    <span class="nav-direction">←</span>
+    <span class="nav-label">Back to Graphic Design</span>
+  </a>
+  <a href="NeonPerch.html" class="project-nav-btn">
+    <span class="nav-label">Next Project</span>
+    <span class="nav-direction">→</span>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const hamburger = document.getElementById('hamburger');
+  const navList   = document.getElementById('nav-list');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navList.classList.toggle('open');
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

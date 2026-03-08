@@ -3,89 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video and Audio Production</title>
+  <meta name="description" content="Video and audio production work by Alyssa Freyman — spanning documentary, narrative, and sound design projects.">
+  <title>Video & Audio | Alyssa Freyman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header / Nav -->
-    <header>
-    <nav>
-      <h1>Alyssa Freyman</h1>
-      <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li class="dropdown">
-      <a href="#work">Work ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="VideoAudio.html">Video / Audio</a></li>
-        <li><a href="TechProj.html">UX / UI</a></li>
-        <li><a href="GraphicDesign.html">Graphics</a></li>
-      </ul>
-    </li>
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
 
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Video and Audio Production</h2>
-    <p>My experience spans all areas of production, starting as a Production Assistant and progressing to roles in gaffing, screenwriting, filming, and directing. This hands-on journey has given me a well-rounded understanding of the production process. Explore some of my video and audio projects below.</p>
+  <!-- Page Hero -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— Work / Video & Audio</p>
+        <h2>Video &amp;<br>Audio Production</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>My experience spans all areas of production, starting as a Production Assistant and progressing to roles in gaffing, screenwriting, filming, and directing. This hands-on journey has given me a well-rounded understanding of the full production process. <br><br>For my latest work, please look at the Forsyth County Government social media pages.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Grid -->
-  <section id="ux-ui-work">
-    <div class="grid">
+  <section id="video-work">
+    <p class="section-label">— Selected Projects</p>
+    <div class="project-grid">
+
       <!-- Project 1 -->
-      <div class="card">
-        <img src="images/UXProject2.jpg" alt="Project 1 Screenshot" class="card-image">
-        <h3>Web Dashboard Design</h3>
-        <p>Created an interactive dashboard with intuitive navigation for a business analytics tool.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-      
+      <a href="ExploringTheMoon.html" class="project-card">
+        <div class="card-thumb">
+          <img src="images/ExploringTheMoon/ETM1.jpg" alt="Exploring the Moon series thumbnail" class="card-image">
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="6,4 20,12 6,20"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Documentary Series</span>
+          <h3>Exploring the Moon</h3>
+          <p>A limited series that explores the technology and people behind NASA's Artemis Missions.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
+
       <!-- Project 2 -->
-      <div class="card">
-        <img src="images/ExploringTheMoon/ETM1.jpg" alt="Project 2 Screenshot" class="card-image">
-        <h3>Exploring the Moon</h3>
-        <p>A limited series that explores the technology and people behind the Artemis Missions.</p>
-        <a href="ExploringTheMoon.html" class="btn">View Project</a>
-      </div>
+      <a href="WhatsBehindThisDoor.html" class="project-card">
+        <div class="card-thumb">
+          <img src="images/WhatsBehindThisDoor/WBTD1.jpg" alt="Project 2 thumbnail" class="card-image">
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="6,4 20,12 6,20"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Short Film</span>
+          <h3>What's Behind This Door</h3>
+          <p>A mini series on social media that highlights different areas of Johnson Space Center.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
 
       <!-- Project 3 -->
-      <div class="card">
-        <img src="images/UXProject3.jpg" alt="Project 3 Screenshot" class="card-image">
-        <h3>Wireframes & Prototypes</h3>
-        <p>Developed wireframes and prototypes for a cross-platform app, focusing on user testing insights.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
+      <a href="RealityCheck.html" class="project-card">
+        <div class="card-thumb">
+          <img src="images/RealityCheck/RC3.png" alt="Project 3 thumbnail" class="card-image">
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="6,4 20,12 6,20"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Audio Production</span>
+          <h3>Reality Check</h3>
+          <p>A 4-episode limited sci-fi series that was made through the Viking Fusion production team.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
 
       <!-- Project 4 -->
-      <div class="card">
-        <img src="images/UXProject4.jpg" alt="Project 4 Screenshot" class="card-image">
-        <h3>Website Redesign</h3>
-        <p>Redesigned a marketing website for a client, improving accessibility, responsiveness, and clarity.</p>
-        <a href="#" class="btn">View Project</a>
-      </div>
-    </div>
+      <a href="MarthasMysteries.html" class="project-card">
+        <div class="card-thumb">
+          <img src="images/MarthasMysteries/MM.png" alt="Project 4 thumbnail" class="card-image">
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="6,4 20,12 6,20"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Directing</span>
+          <h3>Martha's Mysteries</h3>
+          <p>A fictional murder mystery audio theater podcast.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
+<!-- Project 5 -->
+      <!-- <a href="TheCRTJourney.html" class="project-card">
+        <div class="card-thumb">
+          <img src="images/CRTJourney/CRTJ.png" alt="Project 4 thumbnail" class="card-image">
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="6,4 20,12 6,20"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Directing</span>
+          <h3>The CRT Journey</h3>
+          <p>A short documentary that explores how some of the Creative Technologies majors entered into the program and grew through the years.</p>
+          <span class="card-link">View Project →</span>
+        </div>
+      </a>
+    </div> -->
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-left">
-        <img src="images/logo.png" alt="Logo" class="footer-logo">
-        <p>Alyssa Freyman</p>
-      </div>
-      <div class="footer-right">
-        <p>Email: hello@example.com</p>
-        <p>Phone: +1 123 456 7890</p>
-        <p>© 2026 Alyssa Freyman</p>
-      </div>
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
     </div>
-  </footer>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

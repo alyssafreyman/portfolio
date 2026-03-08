@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Night at the Library — a three-level Unity video game designed and developed by Alyssa Freyman and team, featuring custom AI enemy behavior.">
+  <title>A Night at the Library | Alyssa Freyman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="2,2 2,18 6,14 9,20 11,19 8,13 13,13" fill="white" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <nav>
+      <h1><a href="index.html">Alyssa Freyman</a></h1>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">Work ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="VideoAudio.html">Video / Audio</a></li>
+            <li><a href="TechProj.html">UX / UI</a></li>
+            <li><a href="GraphicDesign.html">Graphics</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-hero-left">
+        <p class="page-label">— UX / UI / Game Development</p>
+        <h2>A Night at<br>the Library</h2>
+      </div>
+      <div class="project-hero-right">
+        <p>A three-level 2D video game built in Unity and C# where a student must outsmart a disgruntled librarian to save the world. I owned Level 2's full design, programmed a custom AI enemy, and led the playtesting research process.</p>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">My Role</span>
+            <span class="meta-value">Level Designer, AI Programmer, Character Designer, Playtesting Lead</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Team</span>
+            <span class="meta-value">Alyssa Freyman<br>Anna Joan Valenti<br>Adesimisola Onitiri<br>Shariemar Lopez Vazquez</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Tools</span>
+            <span class="meta-value">Unity, C#, Visual Studio Code</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Type</span>
+            <span class="meta-value">Academic Game Development Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STAT BAR ── -->
+  <div class="stat-bar">
+    <div class="stat-item">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Levels designed & built</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">1</span>
+      <span class="stat-label">Custom AI enemy programmed per member</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">2+</span>
+      <span class="stat-label">External playtesters per member</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-number">C#</span>
+      <span class="stat-label">Primary language</span>
+    </div>
+  </div>
+
+  <!-- ── THE PROBLEM ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 01</p>
+        <h3>The Challenge</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Building a fully playable multi-level video game from scratch in a single summer semester is a significant technical and creative challenge. The team needed to produce a game that was not only functional but engaging — with a coherent narrative, distinct level design, working AI behavior, and a polished player experience.</p>
+        <p>The core design problem: <strong>how do you create a game world that feels alive and challenging without overwhelming a small team's development capacity?</strong> Each team member had to own a vertical slice of the game end-to-end — from design through implementation and testing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLANNING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 02</p>
+        <h3>Planning</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The team began with a structured brainstorming session to define the game's narrative and scope. We landed on a story centered around a disgruntled librarian and a student who must stop him from causing chaos — giving each level a natural escalation in stakes and difficulty.</p>
+        <ul class="case-list">
+          <li><strong>Strengths mapping</strong> — each team member identified their strongest skills (design, programming, narrative, art) and tasks were assigned accordingly to maximize quality across all areas.</li>
+          <li><strong>Task list & scope definition</strong> — we built a comprehensive list of everything the game needed: level layouts, character behaviors, UI elements, sound, and win/lose conditions.</li>
+          <li><strong>TA approval process</strong> — the full game outline was presented to a TA for approval before development began, requiring us to articulate design decisions and justify scope.</li>
+        </ul>
+        <!-- <img src="images/NATL/planning.png" alt="Game planning and outline document" class="project-image" style="margin-top: 16px;"/> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MY CONTRIBUTIONS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 03</p>
+        <h3>My Contributions</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Each team member owned distinct pieces of the game end-to-end. My responsibilities spanned design, programming, and character work:</p>
+
+        <div class="tech-steps">
+          <div class="tech-step">
+            <span class="tech-step-num">01</span>
+            <div class="tech-step-body">
+              <h4>Level 2 Layout Design</h4>
+              <p>Designed the full spatial layout of Level 2 — including room structure, obstacle placement, coin distribution, and difficulty pacing. The layout had to feel fair to the player while creating genuine tension against the AI opponent.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">02</span>
+            <div class="tech-step-body">
+              <h4>AI Dragon Enemy — Pathfinding & Behavior</h4>
+              <p>Programmed a custom AI dragon in C# that competes with the player for coins. The dragon uses a greedy pathfinding algorithm: it locates the nearest coin on the map, navigates to it, collects it, deposits it at its treasure pile, then repeats. A minimum inter-collection interval was built in to keep the behavior realistic and beatable.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">03</span>
+            <div class="tech-step-body">
+              <h4>Dragon Guardian Character Design</h4>
+              <p>Designed the dragon guardian character that appears as a recurring visual element throughout the game, giving it a consistent identity across all three levels and reinforcing the game's fantasy-library aesthetic.</p>
+            </div>
+          </div>
+          <div class="tech-step">
+            <span class="tech-step-num">04</span>
+            <div class="tech-step-body">
+              <h4>Playtesting Research</h4>
+              <p>Organized and ran the playtesting process for two testers— recruiting external participants, ce-designing observation protocols, collecting survey data, and synthesizing findings into actionable polish items for the final submission.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DESIGN ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 04</p>
+        <h3>Designing</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Every team member was required to design and implement at least one AI component. For me that meant the dragon — an enemy that needed to feel threatening without being unbeatable. The key design constraint was that the dragon had to be <strong>smart enough to create pressure but beatable with good strategy</strong>.</p>
+        <p>The greedy nearest-coin algorithm achieved this well: it's fast and efficient, but a player who plans their route can outpace it by collecting clusters of coins before the dragon reaches them.</p>
+
+        <div class="graph-comparison">
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Level 2 Layout</span>
+            </div>
+            <img src="images/NATL/level2layout.png" alt="Level 2 layout design" class="graph-image"/>
+            <p class="graph-caption">The Level 2 spatial layout showing room structure, coin placement, and the dragon's starting position relative to the player.</p>
+          </div>
+          <div class="graph-item">
+            <div class="graph-label-bar">
+              <span class="graph-title">Dragon Guardian</span>
+            </div>
+            <img src="images/NATL/dragonGuardian.png" alt="Dragon guardian character design" class="graph-image"/>
+            <p class="graph-caption">The dragon guardian character design, used throughout all three levels as a recurring visual motif. This was a free asset from Unity, made by Dungeon Mason.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLAYTESTING ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 05</p>
+        <h3>Playtesting &amp; Iteration</h3>
+      </div>
+      <div class="case-body-col">
+        <p>Once the Alpha version was complete, the team moved into a structured playtesting phase. We prioritized recruiting participants who either played video games regularly or had game development knowledge — giving us feedback that was both experiential and technically informed.</p>
+        <ul class="case-list">
+          <li><strong>Think-aloud protocol</strong> — each playtester narrated their actions and decisions in real time, surfacing confusion points that silent observation would have missed.</li>
+          <li><strong>Observation notes</strong> — team members documented friction points, unexpected behaviors, and moments of delight during each session.</li>
+          <li><strong>Survey data</strong> — post-session surveys captured difficulty perception, narrative clarity, and overall enjoyment across all three levels.</li>
+        </ul>
+        <div class="case-callout">
+          <strong>Key insight from playtesting:</strong> Players consistently underestimated the dragon's speed on first encounter, leading to early frustration. We adjusted the dragon's initial delay slightly to give players time to understand the mechanic before it became competitive — improving perceived fairness without reducing challenge.
+        </div>
+        <!-- <img src="images/NATL/playtesting.png" alt="Playtesting session screenshot" class="project-image" style="margin-top: 16px;"/> -->
+      </div>
+    </div>
+  </section>
+
+<!-- ── GAME TRAILER ── -->
+<section class="project-section case-section">
+  <div class="case-content">
+    <div class="case-label-col">
+      <p class="section-label">— 06</p>
+      <h3>Game Trailer</h3>
+    </div>
+    <div class="case-body-col">
+      <p>Watch the official trailer for A Night at the Library — showcasing all three levels, the AI dragon enemy in action, and the game's narrative arc.</p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/1tEyJyr8CG4"
+          title="A Night at the Library — Game Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ── FINAL GAME ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 06</p>
+        <h3>Final Game</h3>
+      </div>
+      <div class="case-body-col">
+        <p>The final version of the game incorporated all playtesting feedback and was submitted for final review. There was an optional training level at the start for new players for get accustomed to the different controls and playable characters. The three levels each presented a distinct challenge tied to the narrative — escalating in complexity and introducing new mechanics as the player progressed.</p>
+
+        <div class="gallery-grid">
+          <img src="images/NATL/training.png" alt="Level 1 gameplay screenshot" class="gallery-item">
+          <img src="images/NATL/level1.png" alt="Level 2 gameplay with dragon AI" class="gallery-item">
+          <img src="images/NATL/level2.png" alt="Level 3 gameplay screenshot" class="gallery-item">
+          <img src="images/NATL/bossLevel.png" alt="Final game demonstration screenshot" class="gallery-item">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TAKEAWAYS ── -->
+  <section class="project-section case-section">
+    <div class="case-content">
+      <div class="case-label-col">
+        <p class="section-label">— 07</p>
+        <h3>Takeaways</h3>
+      </div>
+      <div class="case-body-col">
+        <p>This project was my first experience owning a complete vertical slice of a software product — from concept through design, implementation, and user testing. The AI programming work in particular reinforced how much player experience depends on getting the balance right: an enemy that's too easy is boring, too hard is frustrating, but one tuned correctly creates genuine engagement.</p>
+        <p>The playtesting process was equally valuable. Watching real users interact with something you built — and seeing where your assumptions were wrong — is a humbling and essential part of building anything well. The feedback loop between testing and iteration is something I now apply to every project I work on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT NAVIGATION ── -->
+  <section class="project-nav-section">
+    <a href="TechProj.html" class="project-nav-btn back">
+      <span class="nav-direction">←</span>
+      <span class="nav-label">Back to UX / UI</span>
+    </a>
+    <a href="AudibleRedesign.html" class="project-nav-btn next">
+      <span class="nav-label">Next Project</span>
+      <span class="nav-direction">→</span>
+    </a>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-caption"></p>
+    <div class="arrow left">&#10094;</div>
+    <div class="arrow right">&#10095;</div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/logo.svg" alt="Logo" class="footer-logo">
+      <p>Alyssa Freyman</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Email: alyssa.freyman@gmail.com</p>
+      <!-- <p>Phone: +1 123 456 7890</p> -->
+      <p>© 2026 Alyssa Freyman</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
